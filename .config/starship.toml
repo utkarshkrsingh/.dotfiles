@@ -3,12 +3,12 @@ right_format = "$cmd_duration"
 add_newline = false
 
 [character]
-success_symbol = "[└─](#ffffff)[λ](bold #00ff30)"
-error_symbol = "[└─](#ffffff)[λ](bold #ff0000)"
+success_symbol = "[󱓞](bold #00ff30)"
+error_symbol = "[󱓞](bold #ff0000)"
 
 [hostname]
 ssh_only = false
-format = "┌───(#ffffff)[ $hostname](bold #008eff)[ 󰥳 ](bold #FFFFFF)"
+format = "[$hostname](bold #008eff)[ 󰥳 ](bold #FFFFFF)"
 disabled = false
 
 [cmd_duration]

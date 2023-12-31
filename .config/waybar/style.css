@@ -136,13 +136,13 @@ button:hover {
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: #000000;
+    background-color: #3aff00;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
+        background-color: #000000;
         color: #000000;
     }
 }
@@ -364,6 +364,17 @@ label:focus {
 #custom-update {
     background-color: #3aff00;
     color : #000000;
+    border-radius : 10px;
+    margin-top : 2px;
+    margin-bottom : 2px;
+    margin-right : 2px;
+    padding-left : 10px;
+    padding-right : 10px;
+}
+
+#custom-clock {
+    background-color: @palette;
+    color : @text;
     border-radius : 10px;
     margin-top : 2px;
     margin-bottom : 2px;
