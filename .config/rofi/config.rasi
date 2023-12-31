@@ -1,0 +1,34 @@
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "Oranchelo";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: "   Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+}
+
+@theme "catppuccin-mocha"
+
+
+// Main //
+window {
+    height:           400px;
+    width:            600px;
+    transparency:     "real";
+    fullscreen:       false;
+    enabled:          true;
+    cursor:           "default";
+    spacing:          0px;
+    padding:          0px;
+    border:           2px;
+    border-radius:    10px;
+    border-color:     @border-col;
+    background-color: "transparent";
+}

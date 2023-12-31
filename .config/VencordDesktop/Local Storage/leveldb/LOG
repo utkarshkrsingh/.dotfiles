@@ -1,0 +1,5 @@
+2023/12/30-21:03:55.306 d3a7 Creating DB /home/nyxfr/.config/VencordDesktop/Local Storage/leveldb since it was missing.
+2023/12/30-21:03:55.313 d3a7 Reusing MANIFEST /home/nyxfr/.config/VencordDesktop/Local Storage/leveldb/MANIFEST-000001
+2023/12/30-21:06:06.457 d3a9 Level-0 table #5: started
+2023/12/30-21:06:06.459 d3a9 Level-0 table #5: 22156 bytes OK
+2023/12/30-21:06:06.463 d3a9 Delete type=0 #3

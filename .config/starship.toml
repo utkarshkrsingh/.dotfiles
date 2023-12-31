@@ -1,0 +1,47 @@
+right_format = "$cmd_duration"
+
+add_newline = false
+
+[character]
+success_symbol = "[└─](#ffffff)[λ](bold #00ff30)"
+error_symbol = "[└─](#ffffff)[λ](bold #ff0000)"
+
+[hostname]
+ssh_only = false
+format = "┌───(#ffffff)[ $hostname](bold #008eff)[ 󰥳 ](bold #FFFFFF)"
+disabled = false
+
+[cmd_duration]
+min_time = 1
+format = "󰈸(bold #ff5500)[$duration](bold #008eff)"
+
+[directory]
+truncation_length = 5
+truncation_symbol = " "
+
+[c]
+symbol = "[C ](bold #008eff)"
+
+[git_branch]
+symbol = "-"
+truncation_length = 4
+truncation_symbol = ""
+
+[golang]
+symbol = "[ ](bold #008eff)"
+
+[java]
+symbol = "[ ](bold #008eff)"
+
+[lua]
+symbol = "[ ](bold #008eff)"
+
+[python]
+symbol = "[󰌠 ](bold #008eff)"
+
+[sudo]
+symbol = "[󰐠 ](bold #008eff)"
+disabled = false
+
+[rust]
+symbol = "[ ](bold #008eff)"
