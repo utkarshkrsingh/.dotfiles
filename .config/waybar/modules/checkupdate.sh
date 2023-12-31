@@ -10,7 +10,7 @@ totalupdate=$((pacman_updates + aur_updates))
 if [ $totalupdate == 1 ]; then
     echo -n "󰇚 1 Update"
 elif [ $totalupdate -gt 1 ]; then
-    echo -n "󰇚 $totalupdate Update"
+    echo -n "󰇚 $totalupdate Updates"
 fi
 
 
