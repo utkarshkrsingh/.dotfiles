@@ -2,6 +2,13 @@ local function map(mode, lhs, rhs)
     vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
+-- Split 
+map("n", "<leader>s", "<CMD>split<CR>")
+map("n", "<leader>vs", "<CMD>vsplit<CR>")
+
+-- Terminal
+map("n", "<leader>t", "<CMD>terminal<CR>")
+
 -- Save
 map("n", "<leader>w", "<CMD>update<CR>")
 
@@ -10,6 +17,13 @@ map("n", "<leader>q", "<CMD>q<CR>")
 
 -- Save & Quit
 map("n", "<leader>wq", "<CMD>wq<CR>")
+
+-- Telescope
+local builtin = require('telescope.builtin')
+map("n", "<leader>ff", builtin.find_files, {})
+map("n", "<leader>fg", builtin.live_grep, {})
+map('n', '<leader>fb', builtin.buffers, {})
+map('n', '<leader>fh', builtin.help_tags, {})
 
 -- Windows
 map("n", "<leader>ñ", "<CMD>vsplit<CR>")

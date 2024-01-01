@@ -94,7 +94,11 @@ return require("packer").startup(function(use)
             require("nyxfr.configs.autopairs")
         end,
     })
-    
+
+    -- Telescope
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    }    
 
 
 end)
