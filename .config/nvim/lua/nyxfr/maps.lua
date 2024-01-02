@@ -18,12 +18,21 @@ map("n", "<leader>q", "<CMD>q<CR>")
 -- Save & Quit
 map("n", "<leader>wq", "<CMD>wq<CR>")
 
+-- Fine-cmdline
+map('n', ':', '<cmd>FineCmdline<CR>', {noremap = true})
+
 -- Telescope
 local builtin = require('telescope.builtin')
 map("n", "<leader>ff", builtin.find_files, {})
 map("n", "<leader>fg", builtin.live_grep, {})
 map('n', '<leader>fb', builtin.buffers, {})
 map('n', '<leader>fh', builtin.help_tags, {})
+   
+-- Move to previous/next
+local opts = { noremap = true, silent = true }
+map('n', '<leader>,', '<Cmd>BufferPrevious<CR>', opts) -- Moving on Left Tab 
+map('n', '<leader>.', '<Cmd>BufferNext<CR>', opts) -- Moving on Right Tab 
+map('n', '<leader>/', '<Cmd>BufferClose<CR>', opts) -- CLosing current tab
 
 -- Windows
 map("n", "<leader>ñ", "<CMD>vsplit<CR>")

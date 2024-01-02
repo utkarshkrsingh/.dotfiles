@@ -99,6 +99,25 @@ return require("packer").startup(function(use)
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
     }    
+ 
+    -- Barbar
+    use {'romgrk/barbar.nvim'}
+    
+    -- Fine - cmdline
+    use {
+        'VonHeikemen/fine-cmdline.nvim',
+        requires = {
+            {'MunifTanjim/nui.nvim'}
+        }
+    }
 
+    
+    -- Indent Lines
+    use {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("ibl").setup()
+        end,
+    }
 
 end)
