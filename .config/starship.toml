@@ -71,6 +71,11 @@ symbol = " "
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
 [sudo]
 symbol = "[󰐠 ](bold #008eff)"
 style = "bg:#212736"

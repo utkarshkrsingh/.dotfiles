@@ -1,20 +1,18 @@
-----------------------
--- ╔═╦╗╔═╦╗╔╗╔╗╔══╗╔═╗
--- ║║║║╚╗║║╚╗╔╝║═╦╝║╬║
--- ║║║║╔╩╗║╔╝╚╗║╔╝─║╗╣
--- ╚╩═╝╚══╝╚╝╚╝╚╝──╚╩╝
-----------------------
-
-
-require("nyxfr.settings")
-require("nyxfr.plugins")
-require("nyxfr.maps")
-
--- colorscheme config: kanagawa
-local themeStatus, catppuccin = pcall(require, "catppuccin")
-
-if themeStatus then
-    vim.cmd("colorscheme catppuccin")
-else
-    return
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
+		"git",
+		"clone",
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
+	})
 end
+vim.opt.rtp:prepend(lazypath)
+
+local opts = {}
+require("nyxfr.settings")
+require("nyxfr.keymaps")
+
+require("lazy").setup("nyxfr.plugins")

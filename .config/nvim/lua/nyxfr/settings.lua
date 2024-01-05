@@ -5,8 +5,8 @@ vim.scriptencoding = "utf-8"
 
 -- Map <leader>
 
-global.mapleader = " "
-global.maplocalleader = " "
+global.mapleader = ","
+global.maplocalleader = ","
 
 -- Editor Option
 
