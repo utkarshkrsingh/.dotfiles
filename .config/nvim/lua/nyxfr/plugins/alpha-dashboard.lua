@@ -3,7 +3,15 @@ return {
     config = function()
         require("alpha").setup(require("alpha.themes.dashboard").config)
         local dashboard = require("alpha.themes.dashboard")
-        --dashboard.section.header.val = {}
+        dashboard.section.header.val = {
+            
+[[███╗░░██╗██╗░░░██╗██╗░░██╗███████╗██████╗░]],
+[[████╗░██║╚██╗░██╔╝╚██╗██╔╝██╔════╝██╔══██╗]],
+[[██╔██╗██║░╚████╔╝░░╚███╔╝░█████╗░░██████╔╝]],
+[[██║╚████║░░╚██╔╝░░░██╔██╗░██╔══╝░░██╔══██╗]],
+[[██║░╚███║░░░██║░░░██╔╝╚██╗██║░░░░░██║░░██║]],
+[[╚═╝░░╚══╝░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░░░░╚═╝░░╚═╝]],
+        }
 
         dashboard.section.buttons.val = {
             dashboard.button("f", " find file", ":Telescope find_files <CR>"),
