@@ -1,11 +1,10 @@
-image=~/.config/swaylock/lockscreen.jpg
-
 clock
 indicator
 indicator-radius=75
 indicator-thickness=5
-effect-blur=15x15
-font="JetBrainsMono Nerd Font"
+screenshot
+effect-blur=10x10
+font="IosevkaNerdFont"
 
 fade-in=0.3
 grace=2

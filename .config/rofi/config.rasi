@@ -4,38 +4,98 @@
 // ╚╩═╝╚══╝╚╝╚╝╚╝──╚╩╝
 
 
-
-configuration{
-    modi: "run,drun,window";
-    icon-theme: "Oranchelo";
-    show-icons: true;
-    terminal: "alacritty";
-    drun-display-format: "{icon} {name}";
-    location: 0;
-    disable-history: false;
-    hide-scrollbar: true;
-    display-drun: "   Apps ";
-    display-run: "   Run ";
-    display-window: "   Window";
-    display-Network: " 󰤨  Network";
-    sidebar-mode: true;
+// Config //
+configuration {
+	modi                :       "drun";
+	font                :		"JetBrainsMono Nerd Font 12";
+    icon-theme          :       "Papirus-Dark";
+    show-icons          :       true;
+	display-drun        : 		"";
+	drun-display-format :       "{name}";
+	sidebar-mode        : 		false;
 }
 
-@theme "catppuccin-mocha"
+@theme "themes/theme.rasi"
 
-
-// Main //
 window {
-    height:           400px;
-    width:            600px;
-    transparency:     "real";
-    fullscreen:       false;
-    enabled:          true;
-    cursor:           "default";
-    spacing:          0px;
-    padding:          0px;
-    border:           2px;
-    border-radius:    10px;
-    border-color:     @border-col;
-    background-color: "transparent";
+	transparency        :       "real";
+	width               :       40%;
+    border              :       2px;
+	border-radius       :       25px;
+    border-color        :       @main-br;
+    background-color    :       @main-bg;
+}
+
+prompt { enabled: false; }
+
+entry {
+	placeholder         :		"Search";
+    color               :       @main-fg;
+    background-color    :       @main-bg;
+	placeholder-color   :       @main-fg;
+	expand              :       true;
+	padding             :       1.5%;
+	border-radius       :		5px;
+}
+
+inputbar {
+	children            : 		[ prompt, entry ];
+	background-image    :       url("img/rofi_bg.jpg");
+	expand              :       false;
+	border-radius       :       0px 0 0px 0px;
+	padding             :       100px 20px 10px 540px;
+}
+
+listview {
+    enabled             :       true;
+    cycle               :       true;
+    dynamic             :       true;
+	columns             :       3;
+	lines               :       8;
+	cycle               :       false;
+	dynamic             :       true;
+	layout              :       vertical;
+	padding             :       20px 20px 20px 20px;
+    background-color    :       @main-bg;
+}
+
+mainbox {
+    background-color    :       @main-bg;
+	border-radius       :       25px;
+	children            :       [ inputbar, listview ]; 
+}
+
+element {
+	orientation         :       vertical;
+	padding             :       0.5% 0% 0.5% 0%;
+	border-radius       :       0px;
+    background-color    :       @main-bg;
+    color               :       @main-fg;
+}
+
+element-text {
+	expand              :       true;
+	vertical-align      :       0.5;
+	margin              :       0.5% 3% 0% 3%;
+	background-color    :       inherit;
+	text-color          :       inherit;
+}
+
+element selected {
+	background-color    :       @select-bg;
+    color               :       @select-fg;
+	border-radius       :       5px;
+}
+
+@media(max-aspect-ratio: 1.8) {
+    element {
+        orientation     :       horizontal;
+    }
+}
+
+element-icon {
+    size                :       32px;
+    cursor              :       inherit;
+    background-color    :       transparent;
+    text-color          :       inherit;
 }
