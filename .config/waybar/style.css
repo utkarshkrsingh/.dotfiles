@@ -362,7 +362,8 @@ label:focus {
 }
 
 #custom-update {
-    background-color: #3aff00;
+    /*background-color: #3aff00;*/
+    background-color: #ffffff;
     color : #000000;
     border-radius : 10px;
     margin-top : 2px;
