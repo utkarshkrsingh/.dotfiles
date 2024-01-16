@@ -50,7 +50,7 @@ listview {
     enabled             :       true;
     cycle               :       true;
     dynamic             :       true;
-	columns             :       3;
+	columns             :       2;
 	lines               :       8;
 	cycle               :       false;
 	dynamic             :       true;
