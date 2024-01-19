@@ -18,6 +18,7 @@ return {
 					"jdtls",
 					"pylsp",
 					"rust_analyzer",
+                    "clangd",
 				},
 			})
 		end,
@@ -34,6 +35,7 @@ return {
 			lspconfig.jdtls.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
+            lspconfig.clangd.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
