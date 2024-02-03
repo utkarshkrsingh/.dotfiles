@@ -10,7 +10,7 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/rmenu", "custom/clock"],
+    "modules-left": ["custom/rmenu", "custom/clock", "custom/liveWallpaper"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["custom/update", "pulseaudio", "backlight", "battery", "battery#bat2", "tray", "custom/powerOption"],
 
@@ -113,5 +113,6 @@
 	"exec" : "~/.config/waybar/modules/datetime.sh",
 	"tooltip" : false
     }
+
 
 }
