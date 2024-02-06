@@ -93,7 +93,7 @@
 	"tooltip" : false
     },
     "custom/rmenu" : {
-        "on-click" : "rofi -show drun",
+        "on-click" : "~/.config/nwg-panel/nwg_menu_launcher.sh",
         "format" : "󰣇 ",
         "interval" : "once",
         "tooltip" : false
