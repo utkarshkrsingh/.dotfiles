@@ -11,7 +11,6 @@
 neofetch
 starship init fish | source
 
-
 if status is-interactive
     # Commands to run in interactive sessions can go here
 end
@@ -31,3 +30,4 @@ alias sys-update="sudo pacman -Syu && paru -Syu"
 alias gitlink="git remote set-url origin "
 alias mc="mc --nosubshell"
 alias btop="btop --utf-force"
+
