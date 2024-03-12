@@ -27,7 +27,7 @@ alias pipesX="$HOME/.scripts/pipesX.sh"
 #alias screenrec="cd ~/Videos/Capture && wl-screenrec --audio --audio-device alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor --filename"
 alias startpyenv="source ~/.venv/bin/activate.fish"
 alias sys-update="sudo pacman -Syu && paru -Syu"
-alias gitlink="git remote set-url origin "
+alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@github.com/nyxfr/<REPO-NAME>
 alias mc="mc --nosubshell"
 alias btop="btop --utf-force"
 
