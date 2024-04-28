@@ -50,9 +50,9 @@ listview {
     enabled             :       true;
     cycle               :       true;
     dynamic             :       true;
-	columns             :       2;
-	lines               :       8;
-	cycle               :       false;
+	columns             :       3;
+	lines               :       4;
+	cycle               :       true;
 	dynamic             :       true;
 	layout              :       vertical;
 	padding             :       20px 20px 20px 20px;
@@ -75,7 +75,7 @@ element {
 
 element-text {
 	expand              :       true;
-	vertical-align      :       0.5;
+	vertical-align      :       1.5;
 	margin              :       0.5% 3% 0% 3%;
 	background-color    :       inherit;
 	text-color          :       inherit;
@@ -94,7 +94,7 @@ element selected {
 }
 
 element-icon {
-    size                :       32px;
+    size                :       40px;
     cursor              :       inherit;
     background-color    :       transparent;
     text-color          :       inherit;
