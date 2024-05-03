@@ -19,6 +19,9 @@ return {
 					"pylsp",
 					"rust_analyzer",
                     "clangd",
+                    "emmet_ls",
+                    "emmet_language_server",
+                    "cssls",
 				},
 			})
 		end,
@@ -36,6 +39,9 @@ return {
 			lspconfig.pylsp.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
             lspconfig.clangd.setup({ capabilities = capabilities })
+            lspconfig.emmet_ls.setup({ capabilities = capabilities })
+            lspconfig.emmet_language_server.setup({ capabilities = capabilities })
+            lspconfig.cssls.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})

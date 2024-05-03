@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local opts = {}
-require("nyxfr.settings")
-require("nyxfr.keymaps")
+require("utkarshkrsingh.settings")
+require("utkarshkrsingh.keymaps")
 
-require("lazy").setup("nyxfr.plugins")
+require("lazy").setup("utkarshkrsingh.plugins")
