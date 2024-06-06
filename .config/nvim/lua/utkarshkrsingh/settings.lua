@@ -30,4 +30,5 @@ o.wildmenu = true
 o.showcmd = true
 o.showmatch = true
 o.inccommand = "split"
+o.guicursor = "a:hor20"     -- set cursor style
 --o.splitbelow = "splitright"

@@ -28,7 +28,7 @@ error_symbol = "└─(bold #a3aed2)[λ](bold #ff0000)"
 
 [cmd_duration]
 min_time = 1
-format = "[󰈸](bold #ffffff)[$duration](bold #008eff)"
+format = "[󰈸 ](bold #ffffff)[$duration](bold #008eff)"
 
 [directory]
 style = "fg:#000000 bg:#769ff0"

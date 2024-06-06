@@ -2,7 +2,7 @@ local function map(mode, lhs, rhs)
     vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
--- Split 
+-- Split
 map("n", "<leader>s", "<CMD>split<CR>")
 map("n", "<leader>vs", "<CMD>vsplit<CR>")
 
@@ -33,3 +33,8 @@ map("n", "<C-Down>", "<C-w>-")
 -- Lazy.nvim
 map("n", "<space><space>", "<CMD>Lazy<CR>")
 
+-- Copy current word to system clipboard
+vim.api.nvim_set_keymap('n', '<leader>yw', 'viw"+y', { noremap = true, silent = true })
+
+-- Copy current line to system clipboard
+vim.api.nvim_set_keymap('n', '<leader>yy', '"+yy', { noremap = true, silent = true })
