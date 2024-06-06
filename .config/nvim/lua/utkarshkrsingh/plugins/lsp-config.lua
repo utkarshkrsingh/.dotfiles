@@ -22,6 +22,9 @@ return {
                     "emmet_ls",
                     "emmet_language_server",
                     "cssls",
+                    "cmake",
+                    "autotools_ls",
+                    "markdown_oxide",
 				},
 			})
 		end,
@@ -42,6 +45,9 @@ return {
             lspconfig.emmet_ls.setup({ capabilities = capabilities })
             lspconfig.emmet_language_server.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
+            lspconfig.cmake.setup({ capabilities = capabilities })
+            lspconfig.autotools_ls.setup({ capabilities = capabilities })
+            lspconfig.markdown_oxide.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})

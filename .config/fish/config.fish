@@ -17,7 +17,7 @@ end
 set -g fish_greeting ''
 
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias ls="exa -lahF --color=always --icons --sort=name --group-directories-first"
+alias ls="exa -lahF --tree --level=1 --color=always --icons --sort=name --group-directories-first --no-time --no-user --no-filesize --git --no-permissions"
 alias v="nvim"
 alias bt="btop"
 alias pipes="$HOME/.scripts/pipes.sh"
