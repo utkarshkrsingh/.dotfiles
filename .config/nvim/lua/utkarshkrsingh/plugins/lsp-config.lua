@@ -19,9 +19,6 @@ return {
 					"pylsp",
 					"rust_analyzer",
                     "clangd",
-                    "emmet_ls",
-                    "emmet_language_server",
-                    "cssls",
                     "cmake",
                     "autotools_ls",
                     "markdown_oxide",
@@ -42,9 +39,6 @@ return {
 			lspconfig.pylsp.setup({ capabilities = capabilities })
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
             lspconfig.clangd.setup({ capabilities = capabilities })
-            lspconfig.emmet_ls.setup({ capabilities = capabilities })
-            lspconfig.emmet_language_server.setup({ capabilities = capabilities })
-            lspconfig.cssls.setup({ capabilities = capabilities })
             lspconfig.cmake.setup({ capabilities = capabilities })
             lspconfig.autotools_ls.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({ capabilities = capabilities })

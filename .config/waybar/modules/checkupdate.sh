@@ -12,6 +12,3 @@ if [ $totalupdate == 1 ]; then
 elif [ $totalupdate -gt 1 ]; then
     echo -n "󰇚 $totalupdate Updates"
 fi
-
-
-

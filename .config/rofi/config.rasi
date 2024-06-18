@@ -7,7 +7,7 @@
 // Config //
 configuration {
 	modi                :       "drun";
-	font                :		"JetBrainsMono Nerd Font 12";
+	font                :		"JetBrainsMono Nerd Font 10";
     icon-theme          :       "Papirus-Dark";
     show-icons          :       true;
 	display-drun        : 		"";
@@ -21,7 +21,7 @@ window {
 	transparency        :       "real";
 	width               :       40%;
     border              :       2px;
-	border-radius       :       25px;
+	border-radius       :       15px;
     border-color        :       @main-br;
     background-color    :       @main-bg;
 }
@@ -50,7 +50,7 @@ listview {
     enabled             :       true;
     cycle               :       true;
     dynamic             :       true;
-	columns             :       3;
+	columns             :       2;
 	lines               :       4;
 	cycle               :       true;
 	dynamic             :       true;
@@ -61,7 +61,7 @@ listview {
 
 mainbox {
     background-color    :       @main-bg;
-	border-radius       :       25px;
+	border-radius       :       15px;
 	children            :       [ inputbar, listview ]; 
 }
 
@@ -75,7 +75,7 @@ element {
 
 element-text {
 	expand              :       true;
-	vertical-align      :       1.5;
+	vertical-align      :       1.5%;
 	margin              :       0.5% 3% 0% 3%;
 	background-color    :       inherit;
 	text-color          :       inherit;
