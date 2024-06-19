@@ -104,7 +104,7 @@
         "return-type" : "string",
         "exec" : "~/.config/waybar/modules/checkupdate.sh",
         "tooltip" : false,
-        "on-click" : "setsid -f foot -e paru -Syyu"
+        "on-click" : "setsid -f kitty -e paru -Syyu"
     },
 
     "custom/clock": {

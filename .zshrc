@@ -26,8 +26,8 @@ zinit snippet OMZP::command-not-found
 autoload -U compinit && compinit
 zinit cdreplay -q
 
-# Load Neofetch
-neofetch
+# Load fastfetch
+fastfetch
 
 # Load fzf-theme
 export FZF_DEFAULT_OPTS=" \
