@@ -49,11 +49,9 @@ inputbar {
 listview {
     enabled             :       true;
     cycle               :       true;
-    dynamic             :       true;
+    dynamic             :       false;
 	columns             :       2;
-	lines               :       4;
-	cycle               :       true;
-	dynamic             :       true;
+	lines               :       5;
 	layout              :       vertical;
 	padding             :       20px 20px 20px 20px;
     background-color    :       @main-bg;
@@ -66,7 +64,7 @@ mainbox {
 }
 
 element {
-	orientation         :       vertical;
+	orientation         :       horizontal;
 	padding             :       0.5% 0% 0.5% 0%;
 	border-radius       :       0px;
     background-color    :       @main-bg;
