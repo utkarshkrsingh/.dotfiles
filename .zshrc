@@ -62,6 +62,10 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+export DISPLAY=:0
+export LIBVA_DRIVER_NAME=iHD
+export OCL_ICD_VENDORS=/etc/OpenCL/vendors
+
 # Alias
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias ls="exa -lahF --tree --level=1 --color=always --icons --sort=name --group-directories-first --no-time --no-user --no-filesize --git --no-permissions"
@@ -71,7 +75,7 @@ alias pipes="$HOME/.scripts/pipes.sh"
 alias pipesX="$HOME/.scripts/pipesX.sh"
 #alias dvideo="cd ~/Videos && youtube-dl --verbose"
 #alias daudio="cd ~/Music && youtube-dl --verbose -x --audio-format mp3"
-#alias screenrec="cd ~/Videos/Capture && wl-screenrec --audio --audio-device alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor --filename"
+
 alias startpyenv="source ~/.venv/bin/activate"
 alias sys-update="sudo pacman -Syu && paru -Syu"
 alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@github.com/nyxfr/<REPO-NAME>
@@ -81,3 +85,35 @@ alias btop="btop --utf-force"
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# wl-screenrec
+screenrec() {
+    # Check if the directory exists
+    if [ ! -d ~/Videos/screenrec ]; then
+        echo "Directory ~/Videos/screenrec does not exist."
+        return 1
+    fi
+    
+    # Change to the directory
+    cd ~/Videos/screenrec || {
+        echo "Failed to change directory to ~/Videos/screenrec."
+        return 1
+    }
+
+    # Check if wl-screenrec is installed
+    if ! command -v wl-screenrec > /dev/null; then
+        echo "wl-screenrec is not installed."
+        return 1
+    fi
+
+    # Check if a filename is provided
+    if [ -z "$1" ]; then
+        echo "No filename provided. Using default filename: recording.mp4"
+        FILENAME="recording.mp4"
+    else
+        FILENAME="$1"
+    fi
+
+    # Start screen recording
+    wl-screenrec --audio --audio-device alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor --filename "$FILENAME"
+}

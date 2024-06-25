@@ -5,6 +5,7 @@
     font-family: JetBrainsMono Nerd Font, FontAwesome, Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
     color : @text;
+    margin: 2px;
 }
 
 window#waybar {
@@ -96,8 +97,6 @@ button:hover {
 #window,
 #workspaces {
     background-color : @palette;
-    margin-top : 2px;
-    margin-bottom : 2px;
     border-radius : 10px;
     padding-left : 5px;
     padding-right : 5px;
@@ -117,9 +116,6 @@ button:hover {
     background-color: @palette;
     color : @text;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
-    margin-left : 2px;
     padding-left : 10px;
     padding-right : 10px;
 }
@@ -129,8 +125,6 @@ button:hover {
     background-color: @palette;
     color : @text;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
     padding-left : 10px;
     padding-right : 14px;
 }
@@ -178,8 +172,6 @@ label:focus {
     background-color: @palette;
     color : @text;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
     padding-left : 10px;
     padding-right : 14px;
 }
@@ -197,8 +189,6 @@ label:focus {
     background-color: @palette;
     color : @text;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
     padding-left : 10px;
     padding-right : 14px;
 }
@@ -244,9 +234,6 @@ label:focus {
     background-color: @palette;
     color : @text;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
-    margin-right : 2px;
     padding-left : 10px;
     padding-right : 10px;
 }
@@ -343,19 +330,14 @@ label:focus {
     background-color: @palette;
     color : #ffffff;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
-    margin-right : 2px;
     padding-left : 10px;
     padding-right : 4px;
 }
+
 #custom-rmenu {
     background-color: @palette;
     color : #ffffff;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
-    margin-left : 2px;
     padding-left : 10px;
     padding-right : 4px;
 
@@ -363,12 +345,9 @@ label:focus {
 
 #custom-update {
     /*background-color: #3aff00;*/
-    background-color: #ffffff;
+    background-color: #fab387;
     color : #000000;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
-    margin-right : 2px;
     padding-left : 10px;
     padding-right : 10px;
 }
@@ -377,9 +356,14 @@ label:focus {
     background-color: @palette;
     color : @text;
     border-radius : 10px;
-    margin-top : 2px;
-    margin-bottom : 2px;
-    margin-right : 2px;
+    padding-left : 14px;
+    padding-right : 10px;
+}
+
+#custom-date {
+    background-color: @palette;
+    color : @text;
+    border-radius : 10px;
     padding-left : 14px;
     padding-right : 10px;
 }

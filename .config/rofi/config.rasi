@@ -19,9 +19,9 @@ configuration {
 
 window {
 	transparency        :       "real";
-	width               :       40%;
-    border              :       2px;
-	border-radius       :       15px;
+	width               :       20%;
+    border              :       1px;
+	border-radius       :       10px;
     border-color        :       @main-br;
     background-color    :       @main-bg;
 }
@@ -34,23 +34,23 @@ entry {
     background-color    :       @main-bg;
 	placeholder-color   :       @main-fg;
 	expand              :       true;
-	padding             :       1.5%;
-	border-radius       :		5px;
+	padding             :       1%;
+	border-radius       :		10px;
 }
 
 inputbar {
 	children            : 		[ prompt, entry ];
-	background-image    :       url("img/rofi_bg.jpg");
+    background-image    :       url("img/background.png");
 	expand              :       false;
 	border-radius       :       0px 0 0px 0px;
-	padding             :       100px 20px 10px 540px;
+	padding             :       10px;
 }
 
 listview {
     enabled             :       true;
     cycle               :       true;
     dynamic             :       false;
-	columns             :       2;
+	columns             :       1;
 	lines               :       5;
 	layout              :       vertical;
 	padding             :       20px 20px 20px 20px;
@@ -59,7 +59,7 @@ listview {
 
 mainbox {
     background-color    :       @main-bg;
-	border-radius       :       15px;
+	border-radius       :       10px;
 	children            :       [ inputbar, listview ]; 
 }
 

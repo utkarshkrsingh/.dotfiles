@@ -10,26 +10,26 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["custom/rmenu", "custom/clock", "custom/liveWallpaper"],
-    "modules-center": ["hyprland/workspaces"],
+    "modules-left": ["custom/rmenu", "custom/date", "hyprland/workspaces"],
+    "modules-center": ["custom/clock"],
     "modules-right": ["custom/update", "pulseaudio", "backlight", "battery", "battery#bat2", "tray", "custom/powerOption"],
 
     "hyprland/workspaces": {
       "format": "{icon}",
       "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "",
-        "4": "",
-        "5": "",
-        "6": "",
+        "1": "",
+        "2": "󰈹",
+        "3": "󰨞",
+        "4": "󰙯",
+        "5": "",
+        "6": "",
         "7": "",
         "8": "",
         "9": "",
         "10": "",
         "-99": "",
-        "active": "",
-        "default": " "
+        "active": "",
+        "default": ""
       }
     },
 
@@ -93,7 +93,7 @@
 	"tooltip" : false
     },
     "custom/rmenu" : {
-        "on-click" : "~/.config/nwg-panel/nwg_menu_launcher.sh",
+        "on-click" : "rofi -show drun",
         "format" : "󰣇 ",
         "interval" : "once",
         "tooltip" : false
@@ -110,9 +110,14 @@
     "custom/clock": {
 	"interval" : 1,
 	"return-type" : "string",
-	"exec" : "~/.config/waybar/modules/datetime.sh",
+	"exec" : "~/.config/waybar/modules/clock.sh",
 	"tooltip" : false
+    },
+
+    "custom/date": {
+    "interval": 1,
+    "return-type": "string",
+    "exec": "~/.config/waybar/modules/date.sh",
+    "tooltip": false
     }
-
-
 }
