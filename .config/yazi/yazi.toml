@@ -21,15 +21,20 @@ play = [
 open = [
 	{ run = 'imv "$@"', desc = "Open" },
 ]
-extract = [
-	{ run = 'unzip "$1"', desc = "Extract here", for = "unix" },
+extractzip = [
+	{ run = 'unzip "$1" -d "$(basename -s .zip "$1")"', desc = "Extract here", for = "unix" },
+]
+audio = [
+    { run = 'mpv "$1"', desc = "Playing audio", for = "unix" },
 ]
 
 pdf = [
-    {run = 'zathura "$1"', desc = "View PDF", for = "unix"}
+    { run = 'zathura "$1"', desc = "View PDF", for = "unix" },
 ]
 
 [open]
 prepend_rules = [
-    {name = "*.pdf", use = "pdf"},
+    { name = "*.pdf", use = "pdf" },
+    { name = "*.mp3", use = "audio" },
+    { name = "*.zip", use = "extractzip" }
 ]
