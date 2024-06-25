@@ -1,3 +1,14 @@
+#############################################################
+#############################################################
+## ██╗░░░██╗████████╗██╗░░██╗░█████╗░██████╗░░██████╗██╗░░██╗
+## ██║░░░██║╚══██╔══╝██║░██╔╝██╔══██╗██╔══██╗██╔════╝██║░░██║
+## ██║░░░██║░░░██║░░░█████═╝░███████║██████╔╝╚█████╗░███████║
+## ██║░░░██║░░░██║░░░██╔═██╗░██╔══██║██╔══██╗░╚═══██╗██╔══██║
+## ╚██████╔╝░░░██║░░░██║░╚██╗██║░░██║██║░░██║██████╔╝██║░░██║
+## ░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝
+#############################################################
+#############################################################
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -79,7 +90,6 @@ alias pipesX="$HOME/.scripts/pipesX.sh"
 alias startpyenv="source ~/.venv/bin/activate"
 alias sys-update="sudo pacman -Syu && paru -Syu"
 alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@github.com/nyxfr/<REPO-NAME>
-alias mc="mc --nosubshell"
 alias btop="btop --utf-force"
 
 # Shell integrations
