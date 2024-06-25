@@ -2,7 +2,7 @@ right_format = "$cmd_duration"
 add_newline = true
 
 format = """
-┌────[░▒▓](#a3aed2)\
+[░▒▓](#a3aed2)\
 [  ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 fg:#a3aed2)\
 $directory\
@@ -23,8 +23,8 @@ $time\
 \n$character"""
 
 [character]
-success_symbol = "└─(bold #a3aed2)[λ](bold #00ff30)"
-error_symbol = "└─(bold #a3aed2)[λ](bold #ff0000)"
+success_symbol = "[ ](bold #89b4fa)"
+error_symbol = "[ ](bold #f38ba8)"
 
 [cmd_duration]
 min_time = 1
