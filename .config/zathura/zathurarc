@@ -1,0 +1,29 @@
+include catppuccin-mocha
+set window-title-home-tilde true  # Use tilde for home directory in the window title
+set window-title-format "[zathura] {title}"  # Custom window title format
+set statusbar-h-padding 2  # Horizontal padding for the status bar
+set statusbar-v-padding 2  # Vertical padding for the status bar
+
+# Font settings
+set font "Iosevka Nerd Font 12"
+
+# Plugin specific settings
+plugin {
+  # PDF plugin
+  name = pdf-mupdf
+
+  # Settings for the PDF plugin
+  map zathura-page-flags-pdf annotations  # Enable annotations
+}
+
+# Default view settings
+set adjust-open width
+set zoom 1.0
+
+# Clipboard settings
+set selection-clipboard clipboard
+
+# UI elements
+set show-scrollbars true
+
+set smooth-scroll true

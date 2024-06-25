@@ -24,3 +24,12 @@ open = [
 extract = [
 	{ run = 'unzip "$1"', desc = "Extract here", for = "unix" },
 ]
+
+pdf = [
+    {run = 'zathura "$1"', desc = "View PDF", for = "unix"}
+]
+
+[open]
+prepend_rules = [
+    {name = "*.pdf", use = "pdf"},
+]
