@@ -15,9 +15,11 @@ configuration {
 	font                :		"JetBrainsMono Nerd Font 10";
     icon-theme          :       "Papirus-Dark";
     show-icons          :       true;
-	display-drun        : 		"";
+	display-drun        : 		"Applications:";
+    display-window      :       "Windows:";
 	drun-display-format :       "{name}";
 	sidebar-mode        : 		false;
+    modi                :       "window,run,drun,emoji";
 }
 
 @theme "themes/theme.rasi"

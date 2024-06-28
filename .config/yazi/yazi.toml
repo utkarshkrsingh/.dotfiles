@@ -4,7 +4,7 @@ sort_by = "alphabetical"
 sort_sensitive = true
 sort_dir_first = true
 linemode = "mtime"
-show_hidden = true
+show_hidden = false
 show_symlink = true
 
 [preview]
@@ -19,17 +19,17 @@ play = [
 	{ run = 'mpv "$@"', orphan = true, for = "unix" },
 ]
 open = [
-	{ run = 'imv "$@"', desc = "Open" },
+	{ run = 'setsid -f imv "$@"', desc = "Open" },
 ]
 extractzip = [
 	{ run = 'unzip "$1" -d "$(basename -s .zip "$1")"', desc = "Extract here", for = "unix" },
 ]
 audio = [
-    { run = 'mpv "$1"', desc = "Playing audio", for = "unix" },
+    { run = 'setsid -f mpv "$1"', desc = "Playing audio", for = "unix" },
 ]
 
 pdf = [
-    { run = 'zathura "$1"', desc = "View PDF", for = "unix" },
+    { run = 'setsid -f zathura "$1"', desc = "View PDF", for = "unix" },
 ]
 
 [open]

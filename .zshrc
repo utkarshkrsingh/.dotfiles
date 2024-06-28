@@ -98,6 +98,9 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # wl-screenrec
 screenrec() {
+
+    cd
+
     # Check if the directory exists
     if [ ! -d ~/Videos/screenrec ]; then
         echo "Directory ~/Videos/screenrec does not exist."
@@ -127,3 +130,6 @@ screenrec() {
     # Start screen recording
     wl-screenrec --audio --audio-device alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor --filename "$FILENAME"
 }
+
+export ROFI_FONT="JetBrainsMono Nerd Font 10"
+export ROFI_EMOJI_FONT="NotoColorEmoji 12"
