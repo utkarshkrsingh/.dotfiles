@@ -1,0 +1,2 @@
+swhks &
+pkexec swhkd
