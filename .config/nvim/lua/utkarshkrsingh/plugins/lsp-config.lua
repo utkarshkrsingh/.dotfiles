@@ -24,6 +24,9 @@ return {
                     "markdown_oxide",
                     "emmet_language_server",
                     "cssls",
+                    "bashls",
+                    "tsserver",
+                    "taplo",
 				},
 			})
 		end,
@@ -46,6 +49,9 @@ return {
             lspconfig.markdown_oxide.setup({ capabilities = capabilities })
             lspconfig.emmet_language_server.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
+            lspconfig.bashls.setup({ capabilities = capabilities })
+            lspconfig.tsserver.setup({ capabilities = capabilities })
+            lspconfig.taplo.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})

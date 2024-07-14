@@ -1,16 +1,13 @@
 # wl-screenrec
 screenrec() {
-
-    cd
-
     # Check if the directory exists
-    if [ ! -d ~/Videos/screenrec ]; then
+    if [ ! -d $HOME/Videos/screenrec ]; then
         echo "Directory ~/Videos/screenrec does not exist."
         return 1
     fi
     
     # Change to the directory
-    cd ~/Videos/screenrec || {
+    cd $HOME/Videos/screenrec || {
         echo "Failed to change directory to ~/Videos/screenrec."
         return 1
     }
@@ -31,4 +28,35 @@ screenrec() {
 
     # Start screen recording
     wl-screenrec --audio --audio-device alsa_output.pci-0000_00_1f.3.hdmi-stereo.monitor --filename "$FILENAME"
+}
+
+# dvideo
+dvideo() {
+    # check if the directory exists
+    if [ ! -d $HOME/Downloads ]; then
+        echo "Directory ~/Downloads does not exist."
+        return 1
+    fi
+
+    # change to the directory
+    cd $HOME/Downloads || {
+        echo "Failed to change directory to ~/Downloads."
+        return 1
+    }
+
+    #check is yt-dlp is installed
+    if ! command -v yt-dlp > /dev/null; then
+        echo "yt-dlp is not installed."
+        return 1
+    fi
+
+    # check if a url is given or not
+    if [ -z "$1" ]; then
+        echo "No youtube-url is provided."
+        return 1
+    else
+        URL="$1"
+    fi
+
+    yt-dlp "$URL"
 }
