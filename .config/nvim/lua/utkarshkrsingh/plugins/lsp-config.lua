@@ -22,11 +22,14 @@ return {
                     "cmake",
                     "autotools_ls",
                     "markdown_oxide",
-                    "emmet_language_server",
                     "cssls",
                     "bashls",
-                    "tsserver",
+                    "eslint",
                     "taplo",
+                    "gopls",
+                    "html",
+                    "ts_ls",
+                    "dockerls",
 				},
 			})
 		end,
@@ -50,8 +53,10 @@ return {
             lspconfig.emmet_language_server.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
             lspconfig.bashls.setup({ capabilities = capabilities })
-            lspconfig.tsserver.setup({ capabilities = capabilities })
+            lspconfig.ts_ls.setup({ capabilities = capabilities })
             lspconfig.taplo.setup({ capabilities = capabilities })
+            lspconfig.gopls.setup({ capabilities = capabilities })
+            lspconfig.dockerls.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
