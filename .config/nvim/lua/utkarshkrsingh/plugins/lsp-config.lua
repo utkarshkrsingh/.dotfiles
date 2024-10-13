@@ -20,7 +20,6 @@ return {
 					"rust_analyzer",
                     "clangd",
                     "cmake",
-                    "autotools_ls",
                     "markdown_oxide",
                     "cssls",
                     "bashls",
@@ -48,7 +47,6 @@ return {
 			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
             lspconfig.clangd.setup({ capabilities = capabilities })
             lspconfig.cmake.setup({ capabilities = capabilities })
-            lspconfig.autotools_ls.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({ capabilities = capabilities })
             lspconfig.emmet_language_server.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
