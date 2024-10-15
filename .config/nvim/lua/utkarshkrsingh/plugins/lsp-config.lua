@@ -14,21 +14,21 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls",
-					"jdtls",
-					"pylsp",
-					"rust_analyzer",
-                    "clangd",
-                    "cmake",
-                    "markdown_oxide",
-                    "cssls",
-                    "bashls",
-                    "eslint",
-                    "taplo",
-                    "gopls",
-                    "html",
-                    "ts_ls",
-                    "dockerls",
+					"lua_ls",               -- lua 
+					"jdtls",                -- java
+					"pylsp",                -- python
+					"rust_analyzer",        -- rust 
+                    "clangd",               -- c/c++
+                    "cmake",                -- cmake 
+                    "markdown_oxide",       -- markdown 
+                    "cssls",                -- css 
+                    "bashls",               -- bash 
+                    "eslint",               -- javascript
+                    "taplo",                -- toml
+                    "gopls",                -- go 
+                    "html",                 -- html 
+                    "ts_ls",                -- typescript
+                    "dockerls",             -- docker
 				},
 			})
 		end,
@@ -57,9 +57,9 @@ return {
             lspconfig.dockerls.setup({ capabilities = capabilities })
 
 			-- Keymaps
-			vim.keymap.set("n", "<leader>k", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+			vim.keymap.set("n", "<leader>fd", vim.lsp.buf.hover, {})                    -- fd --> function definition
+			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})               -- cd --> code definition
+			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)   -- ca --> code action
 		end,
 	},
 

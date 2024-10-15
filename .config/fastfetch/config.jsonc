@@ -14,7 +14,7 @@
     "logo": {
         //"source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)", // Supported in kitty only
         //"height": 18                          // Supported in kitty only
-        "type": "none"
+        "type": "small"
     },
     "display": {
         "separator": " :: "
@@ -63,41 +63,41 @@
             "format": "└────────────────────────────────────────────┘"
         },
         "break",
-        {
-            "type": "title",
-            "key": "   ",
-        },
-        {
-            "type": "custom",
-            "format": "┌────────────────────────────────────────────┐"
-        },
-        {
-            "type": "cpu",
-            "format": "{1}",
-            "key": "  󰧎 ",
-            "keyColor": "blue"
-        },
-        {
-            "type": "gpu",
-            "format": "{2}",
-            "key": "   ",
-            "keyColor": "blue"
-        },
-        {
-            "type": "gpu",
-            "format": "{3}",
-            "key": "   ",
-            "keyColor": "blue"
-        },
-        {
-            "type": "uptime",
-            "key": "  󱎫 ",
-            "keyColor": "blue"
-        },
-        {
-            "type": "custom",
-            "format": "└────────────────────────────────────────────┘"
-        },
+        // {
+        //     "type": "title",
+        //     "key": "   ",
+        // },
+        // {
+        //     "type": "custom",
+        //     "format": "┌────────────────────────────────────────────┐"
+        // },
+        // {
+        //     "type": "cpu",
+        //     "format": "{1}",
+        //     "key": "  󰧎 ",
+        //     "keyColor": "blue"
+        // },
+        // {
+        //     "type": "gpu",
+        //     "format": "{2}",
+        //     "key": "   ",
+        //     "keyColor": "blue"
+        // },
+        // {
+        //     "type": "gpu",
+        //     "format": "{3}",
+        //     "key": "   ",
+        //     "keyColor": "blue"
+        // },
+        // {
+        //     "type": "uptime",
+        //     "key": "  󱎫 ",
+        //     "keyColor": "blue"
+        // },
+        // {
+        //     "type": "custom",
+        //     "format": "└────────────────────────────────────────────┘"
+        // },
         "break",
         {
             "type": "colors",
