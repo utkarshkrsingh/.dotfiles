@@ -17,7 +17,6 @@ return {
 					"lua_ls",               -- lua 
 					"jdtls",                -- java
 					"pylsp",                -- python
-					"rust_analyzer",        -- rust 
                     "clangd",               -- c/c++
                     "cmake",                -- cmake 
                     "markdown_oxide",       -- markdown 
@@ -29,6 +28,7 @@ return {
                     "html",                 -- html 
                     "ts_ls",                -- typescript
                     "dockerls",             -- docker
+                    "jsonls",               -- json 
 				},
 			})
 		end,
@@ -44,7 +44,6 @@ return {
 			lspconfig.lua_ls.setup({ capabilities = capabilities })
 			lspconfig.jdtls.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
-			lspconfig.rust_analyzer.setup({ capabilities = capabilities })
             lspconfig.clangd.setup({ capabilities = capabilities })
             lspconfig.cmake.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({ capabilities = capabilities })
@@ -55,6 +54,7 @@ return {
             lspconfig.taplo.setup({ capabilities = capabilities })
             lspconfig.gopls.setup({ capabilities = capabilities })
             lspconfig.dockerls.setup({ capabilities = capabilities })
+            lspconfig.jsonls.setup({ capabilities = capabilities })
 
 			-- Keymaps
 			vim.keymap.set("n", "<leader>fd", vim.lsp.buf.hover, {})                    -- fd --> function definition
