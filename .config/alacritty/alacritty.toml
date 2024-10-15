@@ -2,7 +2,7 @@
 TERM = "xterm-256color"
 
 [window]
-dimensions = { columns = 155, lines = 28 }
+dimensions = { columns = 140, lines = 34 }
 opacity = 0.85
 padding.x = 25
 padding.y = 25
@@ -11,10 +11,10 @@ title = "utkarsh.is-a.dev"
 startup_mode = "Windowed"
 
 [font]
-normal = { family = "Iosevka Nerd Font"}
-bold = { family = "Iosevka Nerd Font"}
-italic = { family = "Iosevka Nerd Font"}
-bold_italic = { family = "Iosevka Nerd Font"}
+normal = { family = "FantasqueSansM Nerd Font"}
+bold = { family = "FantasqueSansM Nerd Font"}
+italic = { family = "FantasqueSansM Nerd Font"}
+bold_italic = { family = "FantasqueSansM Nerd Font"}
 size = 14
 
 [colors.primary]
