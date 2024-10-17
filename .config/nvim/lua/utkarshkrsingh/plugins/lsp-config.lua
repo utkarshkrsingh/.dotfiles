@@ -47,7 +47,6 @@ return {
             lspconfig.clangd.setup({ capabilities = capabilities })
             lspconfig.cmake.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({ capabilities = capabilities })
-            lspconfig.emmet_language_server.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
             lspconfig.bashls.setup({ capabilities = capabilities })
             lspconfig.ts_ls.setup({ capabilities = capabilities })

@@ -17,6 +17,10 @@ italic = { family = "FantasqueSansM Nerd Font"}
 bold_italic = { family = "FantasqueSansM Nerd Font"}
 size = 14
 
+[cursor]
+style.shape = "Underline" 
+style.blinking = "Off"
+
 [colors.primary]
 background = "#1e1e2e"
 foreground = "#cdd6f4"

@@ -19,7 +19,7 @@ configuration {
     display-window      :       "Windows:";
 	drun-display-format :       "{name}";
 	sidebar-mode        : 		false;
-    modi                :       "window,run,drun,emoji";
+    modi                :       "window,run,drun";
 }
 
 @theme "themes/theme.rasi"
