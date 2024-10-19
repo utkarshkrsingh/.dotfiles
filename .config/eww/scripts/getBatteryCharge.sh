@@ -3,7 +3,7 @@
 bat=/sys/class/power_supply/BAT0/
 percentage=$(cat "$bat/capacity")
 
-[ $(cat "$bat/status") = Charging ] && echo "${percentage}" && exit
+[ $(cat "$bat/status") = Charging ] && echo "${percentage}% " && exit
 
 if [ "$percentage" -gt "80" ]; then
     icon="${percentage}% "
