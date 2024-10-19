@@ -4,7 +4,7 @@ indicator-radius=75
 indicator-thickness=5
 screenshot
 effect-blur=10x10
-font="IosevkaNerdFont"
+font="FantasqueSansM Nerd Font"
 
 fade-in=0.3
 grace=2

@@ -1,0 +1,135 @@
+*{
+  all: unset;
+}
+
+$background: #11111b;
+$background-light: #262636;
+$teal: #94e2d5;
+$magenta: #cba6f7;
+$red: #f38ba8;
+$blue: #89b4fa;
+$green: #a6e3a1;
+$yellow: #f9e2af;
+
+.bar {
+  background-color: rgba(30, 30, 46, 0.3);
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.leftSB {
+  padding-left: 2px;
+}
+
+.menuBtn {
+  background-color: $background;
+  color: $blue;
+  font-size: 1.2rem;
+  padding: 0 1.1rem 0 .5rem;
+  border-radius: 5px;
+}
+
+.menuBtn:hover {
+  background-color: $background-light;
+}
+
+.date, .time {
+  background-color: $background;
+  color: $magenta;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.time {
+  color: $teal;
+}
+
+.rightSB {
+  padding-right: 2px;
+}
+
+.btn-brgt {
+  background-color: $background;
+  color: $blue;
+  padding: 0 1.5rem 0 1rem;
+  border-radius: 5px;
+}
+
+.btn-vol {
+  background-color: $background;
+  color: $green;
+  padding: 0 1.5rem 0 1rem;
+  border-radius: 5px;
+}
+
+scale trough {
+  all: unset;
+  background-color: $background;
+  border-radius: 5px;
+  min-height: 10px;
+  min-width: 80px;
+  margin: .3rem 0 .3rem 0;
+}
+
+.brightbar {
+  background-color: $background;
+  color: $blue;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.volbar {
+  background-color: $background;
+  color: $blue;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.brightbar trough highlight {
+  background-color: $blue;
+  border-radius: 5px;
+}
+
+.volbar trough highlight {
+  background-color: $green;
+  border-radius: 5px;
+}
+
+.battery {
+  background-color: $background;
+  color: $yellow;
+  font-size: 1.2rem;
+  padding: 0 1.5rem 0 1rem;
+  border-radius: 5px;
+}
+
+.systray {
+  background-color: $background;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+.btn-hypres, .btn-hyplock, .btn-hyplgout,
+.btn-hyproff {
+  background-color: $background;
+  padding: 0 1rem 0 .6rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.btn-hypres {
+  color: $green;
+}
+
+.btn-hyplock {
+  color: $blue;
+}
+
+.btn-hyplgout {
+  color: $magenta;
+}
+
+.btn-hyproff {
+  color: $red;
+}
