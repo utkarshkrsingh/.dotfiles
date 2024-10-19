@@ -75,7 +75,11 @@
 )
 
 (defpoll currentVolume  :interval "1s"
-    "./scripts/volume.sh"
+    "./scripts/getVolume.sh"
+)
+
+(defpoll currentVolumeIcon  :interval "1s"
+    "./scripts/getVolumeIcon.sh"
 )
 
 (defwidget volume []
@@ -101,11 +105,11 @@
                 :timeout 9999
                 :onchange "pamixer --set-volume {}"))
 
-    (button     :class "btn-vol":onclick "" "${currentVolume}% ")))
+    (button     :class "btn-vol":onclick "" "${currentVolume}% ${currentVolumeIcon}")))
 )
 
 (defpoll batteryIcon :interval "10s"
-    "./scripts/battery.sh"
+    "./scripts/getBatteryCharge.sh"
 )
 
 (defwidget battery []
