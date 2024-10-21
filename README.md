@@ -4,7 +4,7 @@
 ![rice3](/assets/ss03.png)
 ![rice4](/assets/ss04.png)
 
-![eww-bar](/assets/eww-bar.gif)
+![eww-bar](/assets/ewwbar.gif)
 
 ---
 
