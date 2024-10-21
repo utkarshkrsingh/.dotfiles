@@ -1,0 +1,17 @@
+(defwidget battery0 []
+    (box        :orientation "horizontal"
+                :space-evenly false
+    (label      :class "battery"
+                :text batteryIcon
+                :tooltip "Charge"
+    ))
+)
+
+(defwidget battery1 []
+    (box        :orientation "horizontal"
+                :space-evenly false
+    (label      :class "battery"
+                :text batteryIcon
+                :tooltip "Charge"
+    ))
+)

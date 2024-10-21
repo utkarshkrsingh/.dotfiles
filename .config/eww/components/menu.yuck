@@ -1,0 +1,79 @@
+(defwidget menu0 []
+    (eventbox   :onhover "eww update menu0=true"
+                :onhoverlost "eww update menu0=false"
+
+    (box        :class "arcMenu"
+                :orientation "h"
+                :space-evenly false
+                :spacing 2
+                :vexpand false
+
+    (button     :class "menuBtn"
+                :tooltip "ArcMenu"
+                :onclick "" "")
+
+    (revealer   :transition "slideright"
+                :reveal menu0
+                :duration "500ms"
+
+    (box        :orientation "h"
+                :space-evenly false
+                :spacing 2
+
+    (button     :class "btn-rofi"
+                :tooltip "App Launcher"
+                :timeout 9999
+                :onclick "rofi -show drun" "󰍜")
+
+    (button     :class "btn-bar1"
+                :tooltip "Bar-2"
+                :onclick "eww open bar1" "")
+
+
+    (button     :class "btn-db-close"
+                :tooltip "Close Bar-2"
+                :onclick "eww close bar1" "")
+    ))))
+)
+
+(defwidget menu1 []
+    (eventbox   :onhover "eww update menu1=true"
+                :onhoverlost "eww update menu1=false"
+
+    (box        :class "arcMenu"
+                :orientation "h"
+                :space-evenly false
+                :spacing 2
+                :vexpand false
+
+    (button     :class "menuBtn"
+                :tooltip "ArcMenu"
+                :onclick "" "")
+
+    (revealer   :transition "slideright"
+                :reveal menu1
+                :duration "500ms"
+
+    (box        :orientation "h"
+                :space-evenly false
+                :spacing 2
+
+    (button     :class "btn-rofi"
+                :tooltip "App Launcher"
+                :timeout 9999
+                :onclick "rofi -show drun" "󰍜")
+
+    (button     :class "btn-dashboard"
+                :tooltip "Dashboard"
+                :onclick "" "󰕮")
+
+    (button     :class "btn-bar1"
+                :tooltip "Bar-2"
+                :onclick "eww open bar1" "")
+
+
+    (button     :class "btn-db-close"
+                :tooltip "Close Bar-2"
+                :onclick "eww close bar1" "")
+    ))))
+)

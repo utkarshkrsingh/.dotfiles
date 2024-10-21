@@ -777,7 +777,7 @@ StScrollBar StButton#hhandle:active {
 .about-scrollBox {
   border: 1px solid rgba(245, 224, 220, 0.12);
   border-radius: 6px;
-  background-color: #1e1e2e;
+  background-color: #11111b;
   padding: 4px;
   padding-right: 0;
   border-radius: 0;
@@ -1726,7 +1726,7 @@ StScrollBar StButton#hhandle:active {
   padding: 12px;
   spacing: 6px;
   border: none;
-  background-color: #1e1e2e;
+  background-color: #11111b;
   border-radius: 6px;
   color: #f5e0dc;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.35), 0 3px 12px rgba(0, 0, 0, 0.16);

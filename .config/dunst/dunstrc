@@ -34,7 +34,7 @@ origin = top-right
 offset = 15x15
 
 # Notification colors
-background = "#181825"
+background = "#11111b"
 foreground = "#cba6f7"
 frame_color = "#89b4fa"
 

@@ -2,7 +2,7 @@
 cwd = { fg = "#94e2d5" }
 
 # Hovered
-hovered         = { fg = "#1e1e2e", bg = "#89b4fa" }
+hovered         = { fg = "#11111b", bg = "#89b4fa" }
 preview_hovered = { underline = true }
 
 # Find
@@ -15,14 +15,14 @@ marker_cut      = { fg = "#f38ba8", bg = "#f38ba8" }
 marker_selected = { fg = "#89b4fa", bg = "#89b4fa" }
 
 # Tab
-tab_active   = { fg = "#1e1e2e", bg = "#cdd6f4" }
+tab_active   = { fg = "#11111b", bg = "#cdd6f4" }
 tab_inactive = { fg = "#cdd6f4", bg = "#45475a" }
 tab_width    = 1
 
 # Count
-count_copied   = { fg = "#1e1e2e", bg = "#a6e3a1" }
-count_cut      = { fg = "#1e1e2e", bg = "#f38ba8" }
-count_selected = { fg = "#1e1e2e", bg = "#89b4fa" }
+count_copied   = { fg = "#11111b", bg = "#a6e3a1" }
+count_cut      = { fg = "#11111b", bg = "#f38ba8" }
+count_selected = { fg = "#11111b", bg = "#89b4fa" }
 
 # Border
 border_symbol = "│"
@@ -37,9 +37,9 @@ separator_close = ""
 separator_style = { fg = "#45475a", bg = "#45475a" }
 
 # Mode
-mode_normal = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }
-mode_select = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
-mode_unset  = { fg = "#1e1e2e", bg = "#f2cdcd", bold = true }
+mode_normal = { fg = "#11111b", bg = "#89b4fa", bold = true }
+mode_select = { fg = "#11111b", bg = "#a6e3a1", bold = true }
+mode_unset  = { fg = "#11111b", bg = "#f2cdcd", bold = true }
 
 # Progress
 progress_label  = { fg = "#ffffff", bold = true }
@@ -204,7 +204,7 @@ prepend_rules = [
 	{ name = "lxqt.conf", text = "", fg = "#89b4fa" },
 	{ name = "makefile", text = "", fg = "#7f849c" },
 	{ name = "mix.lock", text = "", fg = "#7f849c" },
-	{ name = "mpv.conf", text = "", fg = "#1e1e2e" },
+	{ name = "mpv.conf", text = "", fg = "#11111b" },
 	{ name = "node_modules", text = "", fg = "#f38ba8" },
 	{ name = "package-lock.json", text = "", fg = "#313244" },
 	{ name = "package.json", text = "", fg = "#f38ba8" },

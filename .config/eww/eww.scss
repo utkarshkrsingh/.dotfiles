@@ -1,7 +1,8 @@
-*{
-  all: unset;
-}
+/* *{ */
+  /* all: unset; */
+/* } */
 
+$barBackground: #11111b;
 $background: #11111b;
 $background-light: #262636;
 $teal: #94e2d5;
@@ -10,20 +11,31 @@ $red: #f38ba8;
 $blue: #89b4fa;
 $green: #a6e3a1;
 $yellow: #f9e2af;
+$white: #cdd6f4;
 
-.bar {
-  background-color: rgba(30, 30, 46, 0.5);
+.bar0, .bar1 {
+  all: unset;
+  background-color: $barBackground;
   font-size: 1rem;
   border-radius: 10px;
   padding: 5px;
   border: .05rem solid $blue;
 }
 
+tooltip {
+  all: unset;
+  background-color: $background;
+  color: $white;
+  border-radius: 5px;
+}
+
 .leftSB {
+  all: unset;
   padding-left: 2px;
 }
 
 .menuBtn {
+  all: unset;
   background-color: $background;
   color: $blue;
   font-size: 1.2rem;
@@ -31,11 +43,44 @@ $yellow: #f9e2af;
   border-radius: 5px;
 }
 
-.menuBtn:hover {
-  background-color: $background-light;
+.btn-rofi {
+  all: unset;
+  background-color: $background;
+  color: $teal;
+  font-size: 1.2rem;
+  padding: 0 .9rem 0 .7rem;
+  border-radius: 5px;
+}
+
+.btn-bar1 {
+  all: unset;
+  background-color: $background;
+  color: $green;
+  font-size: 1.2rem;
+  padding: 0 1.2rem 0 .7rem;
+  border-radius: 5px;
+}
+
+.btn-dashboard {
+  all: unset;
+  background-color: $background;
+  color: $yellow;
+  font-size: 1.2rem;
+  padding: 0 1rem 0 .7rem;
+  border-radius: 5px;
+}
+
+.btn-db-close {
+  all: unset;
+  background-color: $background;
+  color: $red;
+  font-size: 1.2rem;
+  padding: 0 .9rem 0 .7rem;
+  border-radius: 5px;
 }
 
 .date, .time {
+  all: unset;
   background-color: $background;
   color: $magenta;
   padding: 0 1rem;
@@ -47,10 +92,12 @@ $yellow: #f9e2af;
 }
 
 .rightSB {
+  all: unset;
   padding-right: 2px;
 }
 
 .btn-brgt {
+  all: unset;
   background-color: $background;
   color: $blue;
   padding: 0 1.5rem 0 1rem;
@@ -58,6 +105,7 @@ $yellow: #f9e2af;
 }
 
 .btn-vol {
+  all: unset;
   background-color: $background;
   color: $green;
   padding: 0 1.5rem 0 1rem;
@@ -98,6 +146,7 @@ scale trough {
 }
 
 .battery {
+  all: unset;
   background-color: $background;
   color: $yellow;
   font-size: 1.2rem;
@@ -113,6 +162,7 @@ scale trough {
 
 .btn-hypres, .btn-hyplock, .btn-hyplgout,
 .btn-hyproff {
+  all: unset;
   background-color: $background;
   padding: 0 1rem 0 .6rem;
   border-radius: 5px;

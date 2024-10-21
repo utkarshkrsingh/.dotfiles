@@ -1,0 +1,65 @@
+(defwidget leftSideBar1 []
+    (box    :class "leftSB"
+            :orientation "h"
+            :halign "start"
+            :hexpand true
+            :vexpand false
+            :space-evenly false
+            :spacing 10
+    (menu1)
+    (date))
+)
+
+(defwidget middleBar1 []
+    (box    :class "midBar"
+            :orientation "h"
+            :halign "center"
+            :hexpand false
+            :vexpand false
+            :space-evenly false
+            :spacing 5
+
+    (time)
+    )
+)
+
+(defwidget rightSideBar1 []
+    (box    :class "rightSB"
+            :orientation "h"
+            :halign "end"
+            :hexpand true
+            :vexpand false
+            :space-evenly false
+            :spacing 10
+
+            (brightness1)
+            (volume1)
+            (battery1)
+            (systemTray)
+            (power1)
+
+    )
+)
+
+(defwidget bar1 []
+    (box  :class "centerbox"
+            :orientation "h"
+
+            (leftSideBar1)
+            (middleBar1)
+            (rightSideBar1)
+    )
+)
+
+(defwindow bar1
+    :monitor 1
+    :geometry (geometry
+        :x "0%"
+        :y "1%"
+        :width "99%"
+        :height "40px"
+        :anchor "top center"
+    )
+    :stacking "fg"
+    :exclusive true
+(bar1))

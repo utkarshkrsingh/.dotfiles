@@ -1,0 +1,11 @@
+(defvar menu0 false)
+(defvar menu1 false)
+
+(defvar bright0 false)
+(defvar bright1 false)
+
+(defvar power0 false)
+(defvar power1 false)
+
+(defvar volum0 false)
+(defvar volum1 false)
