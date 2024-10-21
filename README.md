@@ -4,6 +4,8 @@
 ![rice3](/assets/ss03.png)
 ![rice4](/assets/ss04.png)
 
+![eww-bar](/assets/eww-bar.mp4)
+
 ---
 
 <p>This is by far my latest <strong>Hyprland</strong> customization for <strong>Arch Linux</strong>.<br>Thank You 😁</p>
