@@ -1,25 +1,25 @@
-(defpoll batteryIcon :interval "10s"
+(defpoll batteryIcon :interval "60s"
     "./scripts/getBatteryCharge.sh"
 )
 
-(defpoll currentBrightness :interval "0.1s"
+(defpoll currentBrightness :interval "1s"
     "./scripts/getBrightness.sh"
 )
 
 (defpoll currentDate
-    :interval "60s"
+    :interval "300s"
     `date +"%a, %b, %d, %y"`
 )
 
 (defpoll currentTime
-    :interval "1s"
+    :interval "60s"
     `date +%I:%M:%p`
 )
 
-(defpoll currentVolume  :interval "0.1s"
+(defpoll currentVolume  :interval "1s"
     "./scripts/getVolume.sh"
 )
 
-(defpoll currentVolumeIcon  :interval "0.1s"
+(defpoll currentVolumeIcon  :interval "1s"
     "./scripts/getVolumeIcon.sh"
 )
