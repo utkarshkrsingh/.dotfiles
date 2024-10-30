@@ -1,0 +1,129 @@
+//#############################################################
+//#############################################################
+//## ██╗░░░██╗████████╗██╗░░██╗░█████╗░██████╗░░██████╗██╗░░██╗
+//## ██║░░░██║╚══██╔══╝██║░██╔╝██╔══██╗██╔══██╗██╔════╝██║░░██║
+//## ██║░░░██║░░░██║░░░█████═╝░███████║██████╔╝╚█████╗░███████║
+//## ██║░░░██║░░░██║░░░██╔═██╗░██╔══██║██╔══██╗░╚═══██╗██╔══██║
+//## ╚██████╔╝░░░██║░░░██║░╚██╗██║░░██║██║░░██║██████╔╝██║░░██║
+//## ░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝
+//#############################################################
+//#############################################################
+
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["custom/rmenu", "custom/date", "hyprland/workspaces"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["custom/update", "pulseaudio", "backlight", "battery", "battery#bat2", "tray", "custom/powerOption"],
+
+    "hyprland/workspaces": {
+      "format": "{icon}",
+      "format-icons": {
+        "1": "",
+        "2": "󰈹",
+        "3": "󰨞",
+        "4": "󰙯",
+        "5": "",
+        "6": "",
+        "7": "",
+        "8": "",
+        "9": "",
+        "10": "",
+        "-99": "",
+        "active": "",
+        "default": ""
+      }
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+	"format-icons": [""]
+        //"format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+    	"interval" : 1,
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "󰝟 {format_source}",
+        //"format-source": "{volume}% ",
+        //"format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󱢶 ",
+            "headset": "󰋎 ",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "custom/powerOption": {
+    	"on-click" : "wlogout",
+	"format" : "󰢚 ",
+	"interval" : "once",
+	"tooltip" : false
+    },
+    "custom/rmenu" : {
+        "on-click" : "rofi -show drun",
+        "format" : "󰣇 ",
+        "interval" : "once",
+        "tooltip" : false
+    },
+
+    "custom/update": {
+        "interval" : 120,
+        "return-type" : "string",
+        "exec" : "~/.config/waybar/modules/checkupdate.sh",
+        "tooltip" : false,
+        "on-click" : "setsid -f kitty -e paru -Syyu"
+    },
+
+    "custom/clock": {
+	"interval" : 1,
+	"return-type" : "string",
+	"exec" : "~/.config/waybar/modules/clock.sh",
+	"tooltip" : false
+    },
+
+    "custom/date": {
+    "interval": 1,
+    "return-type": "string",
+    "exec": "~/.config/waybar/modules/date.sh",
+    "tooltip": false
+    }
+}

@@ -1,0 +1,71 @@
+(defwidget power0 []
+    (eventbox   :onhover "eww update power0=true"
+                :onhoverlost "eww update power0=false"
+
+    (box        :class "powermenu"
+                :orientation "h"
+                :space-evenly false
+                :spacing 2
+                :vexpand false
+
+    (revealer   :transition "slideleft"
+                :reveal power0
+                :duration "500ms"
+
+    (box        :orientation "h"
+                :space-evenly false
+                :spacing 2
+
+    (button     :class "btn-hypres"
+                :tooltip "Restart"
+                :onclick "reboot" "")
+
+    (button     :class "btn-hyplock"
+                :tooltip "Screen Lock"
+                :timeout 999999999
+                :onclick "swaylock" "")
+
+    (button     :class "btn-hyplgout"
+                :tooltip "Logout"
+                :onclick "hyprctl dispatch exit" "󰍃")))
+
+    (button     :class "btn-hyproff"
+                :tooltip "Poweroff"
+                :onclick "poweroff" "")))
+)
+
+(defwidget power1 []
+    (eventbox   :onhover "eww update power1=true"
+                :onhoverlost "eww update power1=false"
+
+    (box        :class "powermenu"
+                :orientation "h"
+                :space-evenly false
+                :spacing 2
+                :vexpand false
+
+    (revealer   :transition "slideleft"
+                :reveal power1
+                :duration "500ms"
+
+    (box        :orientation "h"
+                :space-evenly false
+                :spacing 2
+
+    (button     :class "btn-hypres"
+                :tooltip "Restart"
+                :onclick "reboot" "")
+
+    (button     :class "btn-hyplock"
+                :tooltip "Screen Lock"
+                :timeout 999999999
+                :onclick "swaylock" "")
+
+    (button     :class "btn-hyplgout"
+                :tooltip "Logout"
+                :onclick "hyprctl dispatch exit" "󰍃")))
+
+    (button     :class "btn-hyproff"
+                :tooltip "Poweroff"
+                :onclick "poweroff" "")))
+)
