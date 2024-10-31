@@ -5,15 +5,15 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 # Enabling multilib, chaotic-aur and some options
-sudo echo "Color" >> /etc/pacman.conf
-sudo echo "ParallelDownloads = 10" >> /etc/pacman.conf
-sudo echo "ILoveCandy" >> /etc/pacman.conf
-sudo echo ""
-sudo echo "[multilib]" >> /etc/pacman.conf
-sudo echo "Include = /etc/pacman.d/mirrorlist" >> /etc.pacman.conf
-sudo echo ""
-sudo echo "[chaotic-aur]" >> /etc/pacman.conf
-sudo echo "Include = /etc/pacman.d/chaotic-mirrorlist" >> /etc/pacman.conf
+echo "Color" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "ParallelDownloads = 10" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "ILoveCandy" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "[multilib]" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "Include = /etc/pacman.d/mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "[chaotic-aur]" | sudo tee -a /etc/pacman.conf > /dev/null
+echo "Include = /etc/pacman.d/chaotic-mirrorlist" | sudo tee -a /etc/pacman.conf > /dev/null
 
 # Updating the mirrorlists
 sudo pacman -Sy
