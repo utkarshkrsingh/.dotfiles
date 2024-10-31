@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-git clone https://utkarshkrsingh/.dotfiles.git $HOME/
+git clone https://utkarshkrsingh/.dotfiles.git $HOME/.dotfiles
 ```
 
 #### MirrorList
