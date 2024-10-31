@@ -5,6 +5,7 @@ sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.ta
 sudo pacman -U 'https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst'
 
 # Enabling multilib, chaotic-aur and some options
+echo "[options]" | sudo tee -a /etc/pacman.conf > /dev/null
 echo "Color" | sudo tee -a /etc/pacman.conf > /dev/null
 echo "ParallelDownloads = 10" | sudo tee -a /etc/pacman.conf > /dev/null
 echo "ILoveCandy" | sudo tee -a /etc/pacman.conf > /dev/null
