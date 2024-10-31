@@ -50,7 +50,7 @@ rm -rf "$FONT_DIR/FantasqueSansMono.zip"
 #                            |___/           
 #
 
-sudo pacman -S rustup
+sudo pacman -S --noconfirm --needed rustup
 rustup install stable
 rustup default stable
 
@@ -123,8 +123,8 @@ sudo stow -t /usr grub
 # |_____/|_____/|_____/|_|  |_|
 #                                                           
 
-sudo pacman -Syu qt6-svg qt6-declarative qt5-quickcontrols2
-sudo cp -r catppuccin-mocha /usr/share/sddm/themes/
+sudo pacman -S --noconfirm --needed qt6-svg qt6-declarative qt5-quickcontrols2
+sudo cp -r $HOME/.dotfiles/sddm/catppuccin-mocha /usr/share/sddm/themes/
 sudo touch /etc/sddm.conf 
 echo '[Theme]' | sudo tee -a /etc/sddm.conf > /dev/null
 echo 'Current=catppuccin-mocha' | sudo tee -a /etc/sddm.conf > /dev/null
@@ -145,6 +145,9 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 ##################################################################################################################################################################################
 ##################################################################################################################################################################################
+
+# Shell change to zsh
+chsh -s /bin/zsh
 
 ## STARTING SDDM 
 sudo systemctl start sddm
