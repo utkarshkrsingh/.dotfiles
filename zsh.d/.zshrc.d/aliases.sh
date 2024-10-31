@@ -7,7 +7,7 @@ alias pipes="$HOME/.scripts/pipes.sh"
 alias pipesX="$HOME/.scripts/pipesX.sh"
 
 alias startpyenv="source ~/.venv/bin/activate"
-alias sys-update="sudo pacman -Syu && paru -Syu"
+alias update-system="paru -Syu"
 alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@github.com/nyxfr/<REPO-NAME>
 alias btop="btop --utf-force"
 
