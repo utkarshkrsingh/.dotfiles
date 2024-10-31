@@ -73,7 +73,7 @@ xdg-user-dirs-update
 # |_____/ \___/ \__|_| |_|_|\___||___/
 #
 
-mkdir .config/vesktop
+mkdir $HOME/.config/vesktop
 
 stow alacritty
 stow bat
