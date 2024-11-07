@@ -12,7 +12,7 @@
 // Config //
 configuration {
 	modi                :       "drun";
-	font                :		"JetBrainsMono Nerd Font 10";
+	font                :		"FantasqueSansM Nerd Font 10";
     icon-theme          :       "Papirus-Dark";
     show-icons          :       true;
 	display-drun        : 		"Applications:";

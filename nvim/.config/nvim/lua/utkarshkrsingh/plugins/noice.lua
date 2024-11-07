@@ -22,6 +22,12 @@ return {
 				inc_rename = false,
 				lsp_doc_border = false,
 			},
+            messages = {
+                enabled = false,
+            },
+            notify = {
+                enabled = false
+            }
 		})
         require("notify").setup({
             background_colour = "#181825",
