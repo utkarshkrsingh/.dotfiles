@@ -12,4 +12,4 @@ alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@git
 alias btop="btop --utf-force"
 
 alias clear="printf '\033[2J\033[3J\033[1;1H'"
-
+alias vwallpaper="setsid -f mpvpaper -vs -o 'no-audio loop' '*' $HOME/.dotfiles/wallpaper/astronaut.mp4"

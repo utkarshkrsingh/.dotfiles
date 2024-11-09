@@ -1,4 +1,5 @@
 alacritty
+appflowy-bin
 bat
 blueman
 brightnessctl
@@ -26,7 +27,6 @@ network-manager-applet
 npm
 ntfs-3g
 nwg-look
-obsidian
 paru
 p7zip
 pamixer
