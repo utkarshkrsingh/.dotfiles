@@ -18,7 +18,7 @@ bold_italic = { family = "FantasqueSansM Nerd Font"}
 size = 14
 
 [cursor]
-style.shape = "Underline" 
+style.shape = "Beam"
 style.blinking = "Off"
 
 [colors.primary]

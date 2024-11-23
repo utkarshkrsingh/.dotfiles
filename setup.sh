@@ -68,6 +68,7 @@ stow tmux
 stow vesktop
 stow waybar
 stow wlogout
+stow xfce
 stow yazi
 stow zathura
 stow zsh
