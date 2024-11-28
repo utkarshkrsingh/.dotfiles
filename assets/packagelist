@@ -1,5 +1,4 @@
 alacritty
-appflowy-bin
 bat
 blueman
 brightnessctl
@@ -14,6 +13,8 @@ fzf
 gimp
 gnome-disk-utility
 gopls
+hugo
+obsidian
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
