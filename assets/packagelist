@@ -19,6 +19,7 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+tree
 tumbler
 unrar
 unzip
@@ -28,10 +29,12 @@ wireplumber
 wl-clipboard
 wlogout
 xarchiver
+xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-user-dirs
 yazi
 yt-dlp
+zenity
 zathura
 zathura-pdf-mupdf
 zen-browser-bin
