@@ -9,6 +9,7 @@ padding.y = 25
 dynamic_padding = true
 title = "utkarsh.is-a.dev"
 startup_mode = "Windowed"
+# decorations = "transparent"
 
 [font]
 normal = { family = "FantasqueSansM Nerd Font"}

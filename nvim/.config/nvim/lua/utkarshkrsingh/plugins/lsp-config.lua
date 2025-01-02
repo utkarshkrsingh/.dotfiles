@@ -18,7 +18,6 @@ return {
 					"jdtls",                -- java
 					"pylsp",                -- python
                     "clangd",               -- c/c++
-                    "cmake",                -- cmake 
                     "markdown_oxide",       -- markdown 
                     "cssls",                -- css 
                     "bashls",               -- bash 
