@@ -60,6 +60,6 @@
         :height "40px"
         :anchor "top center"
     )
-    :stacking "fg"
+    :stacking "bg"
     :exclusive true
 (bar1))

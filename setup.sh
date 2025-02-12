@@ -100,7 +100,7 @@ else
     echo "Directory already exists: $FONT_DIR"
 fi
 
-# Download the font zip file
+# Download the font zip :
 curl -L -o "$FONT_DIR/FantasqueSansMono.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FantasqueSansMono.zip"
 
 # Japanese Language Support

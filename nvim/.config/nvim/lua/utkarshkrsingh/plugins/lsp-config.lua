@@ -15,7 +15,6 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"lua_ls",               -- lua 
-					"jdtls",                -- java
 					"pylsp",                -- python
                     "clangd",               -- c/c++
                     "markdown_oxide",       -- markdown 
@@ -44,7 +43,6 @@ return {
 			lspconfig.jdtls.setup({ capabilities = capabilities })
 			lspconfig.pylsp.setup({ capabilities = capabilities })
             lspconfig.clangd.setup({ capabilities = capabilities })
-            lspconfig.cmake.setup({ capabilities = capabilities })
             lspconfig.markdown_oxide.setup({ capabilities = capabilities })
             lspconfig.cssls.setup({ capabilities = capabilities })
             lspconfig.bashls.setup({ capabilities = capabilities })
