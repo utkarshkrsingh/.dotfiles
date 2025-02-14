@@ -26,6 +26,13 @@ return {
                     }
                 },
             },
+            filesystem = {
+                filtered_items = {
+                    visible = true,
+                    hide_dotfiles = false,
+                    hide_gitignored = false,
+                },
+            },
         })
 
         vim.keymap.set("n", "<leader>e", "<CMD>Neotree toggle<CR>")

@@ -65,10 +65,10 @@
 
     (button     :class "btn-bar1"
                 :tooltip "Bar-2"
-                :onclick "eww open bar1" "")
+                :onclick "./scripts/enableSecondaryBar" "")
 
     (button     :class "btn-db-close"
                 :tooltip "Close Bar-2"
-                :onclick "eww close bar1" "")
+                :onclick "./scripts/disableSecondaryBar" "")
     ))))
 )

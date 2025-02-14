@@ -1,9 +1,9 @@
 (defpoll batteryIcon :interval "60s"
-    "./scripts/getBatteryCharge.sh"
+    "./scripts/getBatteryCharge"
 )
 
 (defpoll currentBrightness :interval "1s"
-    "./scripts/getBrightness.sh"
+    "./scripts/getBrightness"
 )
 
 (defpoll currentDate
@@ -17,9 +17,9 @@
 )
 
 (defpoll currentVolume  :interval "1s"
-    "./scripts/getVolume.sh"
+    "./scripts/getVolume"
 )
 
 (defpoll currentVolumeIcon  :interval "1s"
-    "./scripts/getVolumeIcon.sh"
+    "./scripts/getVolumeIcon"
 )

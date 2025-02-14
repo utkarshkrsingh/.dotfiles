@@ -19,7 +19,7 @@
                 :min 0
                 :width 150
                 :timeout 9999
-                :onchange "./scripts/setBrightness.sh {}"))
+                :onchange "./scripts/setBrightness {}"))
 
     (button     :class "btn-brgt" :tooltip "Brightness" "${currentBrightness}% ")))
 )
@@ -45,7 +45,7 @@
                 :min 0
                 :width 150
                 :timeout 9999
-                :onchange "./scripts/setBrightness.sh {}"))
+                :onchange "./scripts/setBrightness {}"))
 
     (button     :class "btn-brgt" :tooltip "Brightness" "${currentBrightness}% ")))
 )
