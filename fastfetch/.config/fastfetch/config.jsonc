@@ -12,9 +12,9 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "logo": {
-        //"source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)", // Supported in kitty only
-        //"height": 18                          // Supported in kitty only
-        "type": "small"
+        // "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | sort -R | head -1)",
+        // "height": 10,
+        // "type": "auto" // sixel - foot, kitty - kitty
     },
     "display": {
         "separator": " :: "
@@ -59,6 +59,11 @@
             "keyColor": "blue"
         },
         {
+            "type": "uptime",
+            "key": "  󱎫 ",
+            "keyColor": "blue"
+        },
+        {
             "type": "custom",
             "format": "└────────────────────────────────────────────┘"
         },
@@ -87,11 +92,6 @@
         //     "type": "gpu",
         //     "format": "{3}",
         //     "key": "   ",
-        //     "keyColor": "blue"
-        // },
-        // {
-        //     "type": "uptime",
-        //     "key": "  󱎫 ",
         //     "keyColor": "blue"
         // },
         // {

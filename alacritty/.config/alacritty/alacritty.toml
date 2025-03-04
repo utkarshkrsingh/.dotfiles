@@ -12,10 +12,10 @@ startup_mode = "Windowed"
 # decorations = "transparent"
 
 [font]
-normal = { family = "FantasqueSansM Nerd Font"}
-bold = { family = "FantasqueSansM Nerd Font"}
-italic = { family = "FantasqueSansM Nerd Font"}
-bold_italic = { family = "FantasqueSansM Nerd Font"}
+normal = { family = "Iosevka Nerd Font"}
+bold = { family = "Iosevka Nerd Font"}
+italic = { family = "Iosevka Nerd Font"}
+bold_italic = { family = "Iosevka Nerd Font"}
 size = 14
 
 [cursor]

@@ -32,3 +32,4 @@ o.showmatch = true
 o.inccommand = "split"
 o.guicursor = "a:hor20"     -- set cursor style
 --o.splitbelow = "splitright"
+o.termguicolors = true

@@ -6,15 +6,17 @@ return {
 		dashboard.section.header.val = {
             [[]],
             [[]],
-            [[██╗░░░██╗████████╗██╗░░██╗]],
-            [[██║░░░██║╚══██╔══╝██║░██╔╝]],
-            [[██║░░░██║░░░██║░░░█████═╝░]],
-            [[██║░░░██║░░░██║░░░██╔═██╗░]],
-            [[╚██████╔╝░░░██║░░░██║░╚██╗]],
-            [[░╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝]],
+            [[  _                                    _        ]],
+            [[ | | __   __  ___    ___    ___     __| |   ___ ]],
+            [[ | | \ \ / / / __|  / __|  / _ \   / _` |  / _ \]],
+            [[ |_|  \ V /  \__ \ | (__  | (_) | | (_| | |  __/]],
+            [[ (_)   \_/   |___/  \___|  \___/   \__,_|  \___|]],
             [[]],
             [[]],
 		}
+
+		-- Set header color
+		dashboard.section.header.opts.hl = "DashboardHeader"
 
 		dashboard.section.buttons.val = {
 			dashboard.button("f", " find file", ":Telescope find_files <CR>"),
@@ -27,5 +29,8 @@ return {
 			spacing = 1,
 			position = "center",
 		}
+
+		-- Define the highlight group
+		vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#cba6f7" })  -- Magenta color
 	end,
 }

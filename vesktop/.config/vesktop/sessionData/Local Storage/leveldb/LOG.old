@@ -1,6 +1,0 @@
-2025/01/02-16:46:01.919 1131 Reusing MANIFEST /home/utkarshkrsingh/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
-2025/01/02-16:46:01.924 1131 Recovering log #33
-2025/01/02-16:46:01.924 1131 Reusing old log /home/utkarshkrsingh/.config/vesktop/sessionData/Local Storage/leveldb/000033.log 
-2025/01/02-17:52:02.243 1132 Level-0 table #38: started
-2025/01/02-17:52:02.245 1132 Level-0 table #38: 22940 bytes OK
-2025/01/02-17:52:02.247 1132 Delete type=0 #33

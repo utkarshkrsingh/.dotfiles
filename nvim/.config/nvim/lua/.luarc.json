@@ -1,7 +1,0 @@
-{
-    "diagnostics.globals": [
-        "opts",
-        "vim",
-        "default_component_configs"
-    ]
-}
