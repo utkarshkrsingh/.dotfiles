@@ -31,3 +31,7 @@ map("n", "<C-Right>", "<C-w>>")
 map("n", "<C-Up>", "<C-w>+")
 map("n", "<C-Down>", "<C-w>-")
 
+-- Buffer Navigation
+map("n", "<Space><leader>", "<CMD>:bprev<CR>")
+map("n", "<Space>.", "<CMD>:bnext<CR>")
+map("n", "<Space>/", "<CMD>:bdelete | bnext<CR>")
