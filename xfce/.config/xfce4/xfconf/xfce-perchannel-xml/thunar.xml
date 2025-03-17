@@ -2,7 +2,7 @@
 
 <channel name="thunar" version="1.0">
   <property name="last-view" type="string" value="ThunarIconView"/>
-  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
+  <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_200_PERCENT"/>
   <property name="last-window-maximized" type="bool" value="true"/>
   <property name="last-separator-position" type="int" value="170"/>
   <property name="misc-single-click" type="bool" value="false"/>
@@ -12,4 +12,6 @@
   <property name="last-details-view-column-widths" type="string" value="50,50,134,50,50,94,50,50,1303,50,50,78,50,118"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
   <property name="last-show-hidden" type="bool" value="false"/>
+  <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
+  <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
 </channel>

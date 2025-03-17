@@ -13,7 +13,7 @@
 configuration {
 	modi                :       "drun";
 	font                :		"Iosevka Nerd Font 10";
-    icon-theme          :       "Papirus-Dark";
+    icon-theme          :       "oomox-Catppuccin-Mocha";
     show-icons          :       true;
 	display-drun        : 		"Applications:";
     display-window      :       "Windows:";

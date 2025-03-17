@@ -1,65 +1,85 @@
 return {
-	-- Mason : Portable package manager
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
+	"neovim/nvim-lspconfig",
+	event = { "BufReadPre", "BufNewFile" },
+	dependencies = {
+		"hrsh7th/cmp-nvim-lsp",
+		{ "folke/neodev.nvim", opts = {} },
 	},
+	config = function()
+		local nvim_lsp = require("lspconfig")
+		local mason_lspconfig = require("mason-lspconfig")
 
-	-- Mason Lsp Config
+		local protocol = require("vim.lsp.protocol")
 
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"lua_ls",               -- lua 
-					"pylsp",                -- python
-                    "clangd",               -- c/c++
-                    "markdown_oxide",       -- markdown 
-                    "cssls",                -- css 
-                    "bashls",               -- bash 
-                    "eslint",               -- javascript
-                    "taplo",                -- toml
-                    "gopls",                -- go 
-                    "html",                 -- html 
-                    "ts_ls",                -- typescript
-                    "dockerls",             -- docker
-                    "jsonls",               -- json 
-				},
-			})
-		end,
-	},
+		local on_attach = function(client, bufnr)
+			-- format on save
+			if client.server_capabilities.documentFormattingProvider then
+				vim.api.nvim_create_autocmd("BufWritePre", {
+					group = vim.api.nvim_create_augroup("Format", { clear = true }),
+					buffer = bufnr,
+					callback = function()
+						vim.lsp.buf.format()
+					end,
+				})
+			end
+		end
 
-	-- Lsp Config
+		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
-			lspconfig.lua_ls.setup({ capabilities = capabilities })
-			lspconfig.jdtls.setup({ capabilities = capabilities })
-			lspconfig.pylsp.setup({ capabilities = capabilities })
-            lspconfig.clangd.setup({ capabilities = capabilities })
-            lspconfig.markdown_oxide.setup({ capabilities = capabilities })
-            lspconfig.cssls.setup({ capabilities = capabilities })
-            lspconfig.bashls.setup({ capabilities = capabilities })
-            lspconfig.ts_ls.setup({ capabilities = capabilities })
-            lspconfig.taplo.setup({ capabilities = capabilities })
-            lspconfig.gopls.setup({ capabilities = capabilities })
-            lspconfig.dockerls.setup({ capabilities = capabilities })
-            lspconfig.jsonls.setup({ capabilities = capabilities })
-
-			-- Keymaps
-			vim.keymap.set("n", "<leader>fd", vim.lsp.buf.hover, {})                    -- fd --> function definition
-			vim.keymap.set("n", "<leader>cd", vim.lsp.buf.definition, {})               -- cd --> code definition
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)   -- ca --> code action
-		end,
-	},
-
-	{
-		"onsails/lspkind-nvim",
-	},
+		mason_lspconfig.setup_handlers({
+			function(server)
+				nvim_lsp[server].setup({
+					capabilities = capabilities,
+				})
+			end,
+			["ts_ls"] = function()
+				nvim_lsp["ts_ls"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["cssls"] = function()
+				nvim_lsp["cssls"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["tailwindcss"] = function()
+				nvim_lsp["tailwindcss"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["html"] = function()
+				nvim_lsp["html"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["jsonls"] = function()
+				nvim_lsp["jsonls"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["eslint"] = function()
+				nvim_lsp["eslint"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["pyright"] = function()
+				nvim_lsp["pyright"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["gopls"] = function()
+				nvim_lsp["gopls"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+		})
+	end,
 }
