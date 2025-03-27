@@ -14,4 +14,6 @@
   <property name="last-show-hidden" type="bool" value="false"/>
   <property name="tree-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_16"/>
+  <property name="last-window-width" type="int" value="943"/>
+  <property name="last-window-height" type="int" value="1008"/>
 </channel>

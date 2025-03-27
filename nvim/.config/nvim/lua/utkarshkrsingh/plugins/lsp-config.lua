@@ -11,6 +11,22 @@ return {
 
 		local protocol = require("vim.lsp.protocol")
 
+        local capabilities = require('cmp_nvim_lsp').default_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
+        capabilities.textDocument.completion.completionItem.preselectSupport = true
+        capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
+        capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
+        capabilities.textDocument.completion.completionItem.deprecatedSupport = true
+        capabilities.textDocument.completion.completionItem.commitCharactersSupport = true
+        capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
+        capabilities.textDocument.completion.completionItem.resolveSupport = {
+            properties = {
+                'documentation',
+                'detail',
+                'additionalTextEdits',
+            }
+        }
+
 		local on_attach = function(client, bufnr)
 			-- format on save
 			if client.server_capabilities.documentFormattingProvider then
@@ -28,7 +44,9 @@ return {
 		vim.keymap.set("n", "cd", vim.lsp.buf.definition, {})
 		vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
 
-		local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		mason_lspconfig.setup_handlers({
 			function(server)
@@ -54,12 +72,6 @@ return {
 					capabilities = capabilities,
 				})
 			end,
-			["html"] = function()
-				nvim_lsp["html"].setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-				})
-			end,
 			["jsonls"] = function()
 				nvim_lsp["jsonls"].setup({
 					on_attach = on_attach,
@@ -80,6 +92,12 @@ return {
 			end,
 			["gopls"] = function()
 				nvim_lsp["gopls"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["emmet_ls"] = function()
+				nvim_lsp["emmet_ls"].setup({
 					on_attach = on_attach,
 					capabilities = capabilities,
 				})

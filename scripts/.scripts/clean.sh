@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "Cleaning system cache..."
-rm -rf ~/.cache/*
-rm -rf ~/.local/share/Trash/*
+sudo rm -rf ~/.cache/*
+sudo rm -rf ~/.local/share/Trash/*
 sudo rm -rf /var/cache/pacman/pkg/*
 sudo rm -rf /var/tmp/*
 sudo journalctl --vacuum-time=7d  # Keep last 7 days of logs
