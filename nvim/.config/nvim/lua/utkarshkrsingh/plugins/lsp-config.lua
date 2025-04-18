@@ -102,6 +102,43 @@ return {
 					capabilities = capabilities,
 				})
 			end,
+			["clangd"] = function()
+				nvim_lsp["clangd"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})
+			end,
+			["rust_analyzer"] = function()
+				nvim_lsp["rust_analyzer"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+				})				
+			end,
+			["jdtls"] = function()
+				nvim_lsp["jdtls"].setup({
+					on_attach = on_attach,
+					capabilities = capabilities,
+					-- Java-specific settings can be added here
+					settings = {
+						java = {
+							-- Example configuration options:
+							-- configuration = {
+							-- 	runtimes = {
+							-- 		{
+							-- 			name = "JavaSE-17",
+							-- 			path = "/path/to/jdk-17",
+							-- 		},
+							-- 	}
+							-- },
+							-- signatureHelp = { enabled = true },
+							-- contentProvider = { preferred = 'fernflower' },
+						}
+					},
+					root_dir = function()
+						return vim.fn.getcwd()
+					end,
+				})
+			end,
 		})
 	end,
 }
