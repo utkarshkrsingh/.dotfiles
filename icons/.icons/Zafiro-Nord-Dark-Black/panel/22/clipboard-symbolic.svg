@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.0"
+   width="22"
+   height="22"
+   id="svg4431"
+   sodipodi:version="0.32"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="clipboard-symbolic.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <metadata
+     id="metadata19">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:window-height="1002"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10.0"
+     gridtolerance="10.0"
+     objecttolerance="10.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#b1b1b1"
+     id="base"
+     showgrid="true"
+     inkscape:zoom="20.749999"
+     inkscape:cx="12.000001"
+     inkscape:cy="8.8674703"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:current-layer="svg4431"
+     inkscape:window-maximized="1"
+     showguides="false"
+     inkscape:pagecheckerboard="0">
+    <inkscape:grid
+       type="xygrid"
+       id="grid839"
+       spacingx="0.05"
+       spacingy="0.05" />
+  </sodipodi:namedview>
+  <defs
+     id="defs4433">
+    <linearGradient
+       id="linearGradient3587-6-5">
+      <stop
+         id="stop3589-9-2"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3591-7-4"
+         style="stop-color:#363636;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="50.925655"
+       y1="11.648451"
+       x2="73.986542"
+       y2="11.648451"
+       id="linearGradient2390"
+       xlink:href="#linearGradient3587-6-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,0.7805424,-0.73368357,0,28.208675,-37.749634)" />
+    <linearGradient
+       x1="9"
+       y1="3"
+       x2="9"
+       y2="21"
+       id="linearGradient2393"
+       xlink:href="#linearGradient3587-6-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2,-1)" />
+    <linearGradient
+       x1="50.925655"
+       y1="11.648451"
+       x2="73.986542"
+       y2="11.648451"
+       id="linearGradient3261"
+       xlink:href="#linearGradient3587-6-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0,0.7805424,-0.7617909,0,29.873684,-36.749634)" />
+  </defs>
+  <path
+     id="path4"
+     style="fill:#ffffff;fill-opacity:1;stroke-width:0.575608"
+     d="M 10.245408,2.6474773 C 9.4769594,3.307753 8.9480998,4.2686639 8.9557682,5.225495 l 0.062525,7.939986 0.00954,1.132963 c 0.00908,1.134016 1.1506308,2.259119 2.2846558,2.250037 1.134017,-0.0091 2.2609,-1.152044 2.251819,-2.286072 L 13.5,6.3238401 l -1.132964,0.00954 0.06289,7.9367849 c 0.0045,0.567023 -0.558202,1.139378 -1.125201,1.143928 -0.567012,0.0045 -1.139393,-0.558186 -1.143928,-1.125202 l -0.0078,-1.134376 -0.05513,-6.8024039 -0.0092,-1.136165 c -0.0091,-1.1340247 1.116012,-2.2755699 2.250037,-2.2846552 1.134013,-0.00908 2.277365,1.114593 2.286436,2.2486193 l 0.0078,1.134381 0.07385,9.0715328 c 0.01361,1.701029 -1.672784,3.416734 -3.37382,3.430368 -1.7010249,0.01361 -3.4167487,-1.672787 -3.430367,-3.373822 l -0.072071,-9.0729493 -1.1343813,0.00776 0.072071,9.0729503 c 0.018167,2.268048 2.3044657,4.51859 4.5725103,4.50044 2.268034,-0.01816 4.518597,-2.304459 4.50044,-4.572511 l -0.07386,-9.0715342 -0.0078,-1.1343811 C 15.745892,3.4711204 14.031955,1.7832853 12.33093,1.7969126 c -0.744201,0.00597 -1.487915,0.3370175 -2.085597,0.8505653 z" />
+</svg>

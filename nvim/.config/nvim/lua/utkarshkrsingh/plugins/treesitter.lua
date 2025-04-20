@@ -20,8 +20,6 @@ return {
             ensure_installed = {
                 "json",
                 "javascript",
-                "typescript",
-                "tsx",
                 "yaml",
                 "html",
                 "css",
@@ -29,12 +27,12 @@ return {
                 "markdown_inline",
                 "bash",
                 "lua",
-                "vim",
                 "dockerfile",
                 "gitignore",
                 "c",
                 "rust",
-                "go",
+                "vim",
+				"go",
             },
             incremental_selection = {
                 enable = true,

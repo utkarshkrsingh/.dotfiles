@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="22"
+   height="22"
+   viewBox="0 0 5.8208332 5.8208335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   sodipodi:docname="search.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     width="22px"
+     inkscape:zoom="12.699352"
+     inkscape:cx="-14.134579"
+     inkscape:cy="11.575394"
+     inkscape:window-width="1920"
+     inkscape:window-height="1012"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <style id="current-color-scheme" type="text/css">
+    .ColorScheme-Text { color:#ffffff; } .ColorScheme-Highlight { color:#5294e2; }
+  </style>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path846"
+       style="fill:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none"
+       d="m 1.1921273,1.1733125 c -0.58006889,0.580069 -0.5800689,1.5276018 0,2.1076708 0.5308539,0.5308538 1.3705849,0.5768758 1.9538341,0.1362969 L 4.504912,5.1109442 5.1304898,4.4853665 3.4364604,3.1260504 C 3.8763359,2.5428363 3.830388,1.7039022 3.2997982,1.1733125 c -0.580069,-0.58006908 -1.5276019,-0.580069 -2.1076709,0 z M 1.5458418,1.527027 c 0.3889948,-0.3889947 1.0112472,-0.3889948 1.4002416,1e-7 0.3889948,0.3889947 0.3904566,1.0127086 0.00146,1.4017033 -0.3889929,0.3889948 -1.0127069,0.3875331 -1.4017016,-0.00146 -0.3889947,-0.3889947 -0.3889947,-1.0112471 0,-1.4002418 z"
+       sodipodi:nodetypes="ssccccsssssss"
+       class="ColorScheme-Text" />
+  </g>
+</svg>

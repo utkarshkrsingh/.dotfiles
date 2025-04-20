@@ -90,5 +90,6 @@ return {
 
     -- Keymap to toggle NeoTree
     vim.keymap.set("n", "<leader>e", "<cmd>Neotree toggle<CR>", { desc = "Toggle NeoTree" })
+	vim.keymap.set("n", "<leader>o", "<cmd>Neotree focus<CR>", { desc = "Focus NeoTree" })
   end,
 }

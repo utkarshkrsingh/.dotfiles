@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "tokyodark",
+				theme = "nordfox",
 				component_separators = { left = "", right = "" },
 				section_separators = { left = "", right = "" },
 			},
