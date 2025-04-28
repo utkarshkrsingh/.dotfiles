@@ -4,10 +4,20 @@ return {
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         { "folke/neodev.nvim", opts = {} },
+        { "windwp/nvim-autopairs", opts = {} }, -- NEW: autopairs
     },
     config = function()
         local nvim_lsp = require("lspconfig")
         local mason_lspconfig = require("mason-lspconfig")
+        local cmp_nvim_lsp = require("cmp_nvim_lsp")
+
+        -- Setup nvim-autopairs integration
+        local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+        local cmp = require("cmp")
+        cmp.event:on(
+            "confirm_done",
+            cmp_autopairs.on_confirm_done()
+        )
 
         local protocol = require("vim.lsp.protocol")
 
@@ -24,8 +34,9 @@ return {
             end
         end
 
-        local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
+        -- capabilities for better autocompletion
+        local capabilities = cmp_nvim_lsp.default_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = true
         capabilities.textDocument.completion.completionItem.preselectSupport = true
         capabilities.textDocument.completion.completionItem.insertReplaceSupport = true
         capabilities.textDocument.completion.completionItem.labelDetailsSupport = true
@@ -34,27 +45,24 @@ return {
         capabilities.textDocument.completion.completionItem.tagSupport = { valueSet = { 1 } }
         capabilities.textDocument.completion.completionItem.resolveSupport = {
             properties = {
-                'documentation',
-                'detail',
-                'additionalTextEdits',
-            }
+                "documentation",
+                "detail",
+                "additionalTextEdits",
+            },
         }
-		
-		vim.keymap.set("n", "fd", vim.lsp.buf.hover, {})
-		vim.keymap.set("n", "cd", vim.lsp.buf.definition, {})
-		vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
 
-		-- local capabilities = require("cmp_nvim_lsp").default_capabilities()
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities.textDocument.completion.completionItem.snippetSupport = true
+        vim.keymap.set("n", "fd", vim.lsp.buf.hover, {})
+        vim.keymap.set("n", "cd", vim.lsp.buf.definition, {})
+        vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
 
         mason_lspconfig.setup_handlers({
             function(server)
                 nvim_lsp[server].setup({
+                    on_attach = on_attach,
                     capabilities = capabilities,
                 })
             end,
-            ["ts_ls"] = function()
+            ["ts_ls"] = function() -- FIX: correct server for JavaScript/TypeScript
                 nvim_lsp["ts_ls"].setup({
                     on_attach = on_attach,
                     capabilities = capabilities,
@@ -96,12 +104,18 @@ return {
                     capabilities = capabilities,
                 })
             end,
-			["gopls"] = function()
-				nvim_lsp["gopls"].setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-				})
-			end,
+            ["gopls"] = function()
+                nvim_lsp["gopls"].setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities,
+                })
+            end,
+            ["jdtls"] = function()
+                nvim_lsp["jdtls"].setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities,
+                })
+            end,
         })
     end,
 }
