@@ -27,3 +27,10 @@ set selection-clipboard clipboard
 set show-scrollbars true
 
 set smooth-scroll true
+
+# Recolor the page images
+set recolor true
+set recolor-keephue true
+
+# Do not affect the page color
+set recolor false

@@ -1,5 +1,5 @@
 /* *{ */
-  /* all: unset; */
+/* all: unset; */
 /* } */
 
 * {
@@ -17,7 +17,8 @@ $green: #a6e3a1;
 $yellow: #f9e2af;
 $white: #cdd6f4;
 
-.bar0, .bar1 {
+.bar0,
+.bar1 {
   all: unset;
   background-color: $barBackground;
   font-size: 1rem;
@@ -83,7 +84,8 @@ tooltip {
   border-radius: 5px;
 }
 
-.date, .time {
+.date,
+.time {
   all: unset;
   background-color: $background;
   color: $magenta;
@@ -164,7 +166,9 @@ scale trough {
   border-radius: 5px;
 }
 
-.btn-hypres, .btn-hyplock, .btn-hyplgout,
+.btn-hypres,
+.btn-hyplock,
+.btn-hyplgout,
 .btn-hyproff {
   all: unset;
   background-color: $background;

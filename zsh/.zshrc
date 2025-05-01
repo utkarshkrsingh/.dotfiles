@@ -48,6 +48,9 @@ source "${HOME}/.zshrc.d/zoxide.sh"
 # Source tools configuration (if applicable)
 source "${HOME}/.zshrc.d/tools.sh"
 
+# Source keyring configuration
+# source "$HOME/.zshrc.d/keyring.sh"
+
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/utkarshkrsingh/.dart-cli-completion/zsh-config.zsh ]] && . /home/utkarshkrsingh/.dart-cli-completion/zsh-config.zsh || true
