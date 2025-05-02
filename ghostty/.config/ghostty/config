@@ -2,7 +2,7 @@ font-family = "FantasqueSansM Nerd Font"
 font-size = 13
 window-padding-x = 25
 window-padding-y = 25
-background-opacity = 0.9
+#background-opacity = 0.9
 
 palette = 0=#45475a
 palette = 1=#f38ba8
