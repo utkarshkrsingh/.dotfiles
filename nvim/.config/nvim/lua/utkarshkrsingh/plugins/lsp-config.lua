@@ -4,7 +4,7 @@ return {
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         { "folke/neodev.nvim", opts = {} },
-        { "windwp/nvim-autopairs", opts = {} }, -- NEW: autopairs
+        { "windwp/nvim-autopairs", opts = {} },
     },
     config = function()
         local nvim_lsp = require("lspconfig")
@@ -22,7 +22,7 @@ return {
         local protocol = require("vim.lsp.protocol")
 
         local on_attach = function(client, bufnr)
-            -- format on save
+            
             if client.server_capabilities.documentFormattingProvider then
                 vim.api.nvim_create_autocmd("BufWritePre", {
                     group = vim.api.nvim_create_augroup("Format", { clear = true }),
@@ -55,15 +55,9 @@ return {
         vim.keymap.set("n", "cd", vim.lsp.buf.definition, {})
         vim.keymap.set("n", "ca", vim.lsp.buf.code_action, {})
 
-        mason_lspconfig.setup_handlers({
-            function(server)
-                nvim_lsp[server].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-            end,
-            ["ts_ls"] = function() -- FIX: correct server for JavaScript/TypeScript
-                nvim_lsp["ts_ls"].setup({
+        mason_lspconfig.setup({		
+			["ts_ls"] = function()
+                nvim_lsp["ts_ls"].setup({				
                     on_attach = on_attach,
                     capabilities = capabilities,
                 })
@@ -106,12 +100,6 @@ return {
             end,
             ["gopls"] = function()
                 nvim_lsp["gopls"].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-            end,
-            ["jdtls"] = function()
-                nvim_lsp["jdtls"].setup({
                     on_attach = on_attach,
                     capabilities = capabilities,
                 })
