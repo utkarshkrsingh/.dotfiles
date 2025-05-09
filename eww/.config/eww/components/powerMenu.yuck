@@ -10,7 +10,7 @@
 
     (revealer   :transition "slideleft"
                 :reveal power0
-                :duration "500ms"
+				:duration "500ms"
 
     (box        :orientation "h"
                 :space-evenly false
@@ -46,7 +46,7 @@
 
     (revealer   :transition "slideleft"
                 :reveal power1
-                :duration "500ms"
+				:duration "500ms"
 
     (box        :orientation "h"
                 :space-evenly false

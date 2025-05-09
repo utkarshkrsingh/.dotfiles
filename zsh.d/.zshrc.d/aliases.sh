@@ -9,8 +9,6 @@ alias pipes="$HOME/.scripts/pipes.sh"
 alias startpyenv="source ~/.venv/bin/activate"
 alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@github.com/nyxfr/<REPO-NAME>
 
-alias clear="printf '\033[2J\033[3J\033[1;1H'"
-
 alias mcres="hyprctl keyword monitor HDMI-A-1,1600x900,0x0,0.8"
 alias revmcres="hyprctl keyword monitor HDMI-A-1,1600x900,0x0,1"
 
