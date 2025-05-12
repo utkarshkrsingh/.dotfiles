@@ -20,10 +20,10 @@
                 :tooltip "Restart"
                 :onclick "reboot" "")
 
-    (button     :class "btn-hyplock"
-                :tooltip "Screen Lock"
+    (button     :class "btn-hyprsuspend"
+                :tooltip "Suspend"
                 :timeout 999999999
-                :onclick "swaylock" "")
+                :onclick "loginctl lock-session &&  systemctl suspend" "󰔟")
 
     (button     :class "btn-hyplgout"
                 :tooltip "Logout"
@@ -56,10 +56,10 @@
                 :tooltip "Restart"
                 :onclick "reboot" "")
 
-    (button     :class "btn-hyplock"
-                :tooltip "Screen Lock"
+    (button     :class "btn-hyprsuspend"
+                :tooltip "Suspend"
                 :timeout 999999999
-                :onclick "swaylock" "")
+                :onclick "loginctl lock-session &&  systemctl suspend" "󰔟")
 
     (button     :class "btn-hyplgout"
                 :tooltip "Logout"

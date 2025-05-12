@@ -18,7 +18,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"gopls",
-				-- "jdtls",
+				"clangd",
 			},
 		})
 
@@ -31,6 +31,7 @@ return {
 				"pylint",
 				"eslint_d",
 				"dockerls",
+				"clang-format",
 			},
 		})
 	end,

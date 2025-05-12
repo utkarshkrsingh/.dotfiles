@@ -9,6 +9,5 @@ eww open bar0
 sleep 2
 
 # Start tray apps after system tray is ready
-hypridle &
 copyq --start-server &
 nm-applet --indicator &

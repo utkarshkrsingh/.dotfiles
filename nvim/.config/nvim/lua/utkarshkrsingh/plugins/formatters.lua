@@ -18,6 +18,7 @@ return {
             lua = { "stylua" },
             python = { "isort", "black" },
             go = { "gofmt" },
+			cpp = { "clang-format" }
         }
 
         -- Filter out unavailable formatters
@@ -48,6 +49,9 @@ return {
                 isort = {
                     args = { "--profile", "black" },
                 },
+				["clang-format"] = {
+					args = { "--style={BasedOnStyle: llvm, IndentWidth: 4, UseTab: Never}" },
+				},
             },
         })
 
