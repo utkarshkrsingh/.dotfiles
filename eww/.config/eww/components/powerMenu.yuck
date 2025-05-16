@@ -23,7 +23,7 @@
     (button     :class "btn-hyprsuspend"
                 :tooltip "Suspend"
                 :timeout 999999999
-                :onclick "loginctl lock-session &&  systemctl suspend" "󰔟")
+                :onclick "loginctl lock-session && sleep 1 &&  systemctl suspend" "󰔟")
 
     (button     :class "btn-hyplgout"
                 :tooltip "Logout"

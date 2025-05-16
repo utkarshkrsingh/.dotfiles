@@ -124,3 +124,35 @@ dvideo() {
 
     yt-dlp "$URL"
 }
+
+daudio() {
+    # Check if the directory exists
+    if [ ! -d "$HOME/Downloads" ]; then
+        echo "Directory ~/Downloads does not exist."
+        return 1
+    fi
+
+    # Change to the directory
+    cd "$HOME/Downloads" || {
+        echo "Failed to change directory to ~/Downloads."
+        return 1
+    }
+
+    # Check if yt-dlp is installed
+    if ! command -v yt-dlp > /dev/null; then
+        echo "yt-dlp is not installed."
+        return 1
+    fi
+
+    # Check if a URL is given
+    if [ -z "$1" ]; then
+        echo "No YouTube URL is provided."
+        return 1
+    fi
+
+    URL="$1"
+
+    # Download audio only (best audio format)
+    yt-dlp -x --audio-format mp3 "$URL"
+}
+
