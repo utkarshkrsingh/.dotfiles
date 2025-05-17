@@ -11,3 +11,4 @@ sleep 2
 # Start tray apps after system tray is ready
 copyq --start-server &
 nm-applet --indicator &
+blueman-applet &

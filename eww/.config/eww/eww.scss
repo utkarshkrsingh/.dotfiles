@@ -6,7 +6,7 @@
   font-family: FantasqueSansM Nerd Font;
 }
 
-$barBackground: #11111b;
+$barBackground: #1e1e2e;
 $background: #11111b;
 $background-light: #262636;
 $teal: #94e2d5;
@@ -22,9 +22,10 @@ $white: #cdd6f4;
   all: unset;
   background-color: $barBackground;
   font-size: 1rem;
-  border-radius: 10px;
   padding: 5px;
-  border: .05rem solid $blue;
+  border-bottom: 0.05rem solid $blue;
+  // border-radius: 10px;
+  // border: .05rem solid $blue;
 }
 
 tooltip {
@@ -183,6 +184,7 @@ scale trough {
 
 .btn-hyprsuspend {
   color: $blue;
+  padding: 0 1rem 0 1rem;
 }
 
 .btn-hyplgout {

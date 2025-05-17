@@ -98,18 +98,6 @@ return {
                     capabilities = capabilities,
                 })
             end,
-            ["gopls"] = function()
-                nvim_lsp["gopls"].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-			end,
-			["clangd"] = function ()
-				nvim_lsp["clangd"].setup({
-					on_attach = on_attach,
-					capabilities = capabilities,
-				})
-			end,
         })
     end,
 }
