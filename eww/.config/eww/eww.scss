@@ -6,7 +6,8 @@
   font-family: FantasqueSansM Nerd Font;
 }
 
-$barBackground: #1e1e2e;
+$barBackground: #11111b;
+$barBackground-transparent: transparent;
 $background: #11111b;
 $background-light: #262636;
 $teal: #94e2d5;
@@ -23,9 +24,9 @@ $white: #cdd6f4;
   background-color: $barBackground;
   font-size: 1rem;
   padding: 5px;
-  border-bottom: 0.05rem solid $blue;
-  // border-radius: 10px;
-  // border: .05rem solid $blue;
+  // border-bottom: 0.05rem solid $blue;
+  border-radius: 10px;
+  border: .05rem solid $blue;
 }
 
 tooltip {

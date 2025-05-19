@@ -17,6 +17,7 @@ return {
             markdown = { "prettier" },
             lua = { "stylua" },
             python = { "isort", "black" },
+			go = {"gofmt"},
         }
 
         -- Filter out unavailable formatters
@@ -47,6 +48,9 @@ return {
                 isort = {
                     args = { "--profile", "black" },
                 },
+				gofmt = {
+				    prepend_args = { "-s" },
+				},
             },
         })
 

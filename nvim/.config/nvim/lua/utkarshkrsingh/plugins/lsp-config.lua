@@ -11,6 +11,15 @@ return {
         local mason_lspconfig = require("mason-lspconfig")
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
+		-- Enable diagnostics display
+		vim.diagnostic.config({
+        	virtual_text = true,
+        	signs = true,
+        	underline = true,
+        	update_in_insert = false,
+        	severity_sort = true,
+    	})
+
         -- Setup nvim-autopairs integration
         local cmp_autopairs = require("nvim-autopairs.completion.cmp")
         local cmp = require("cmp")
@@ -94,6 +103,12 @@ return {
             end,
             ["pyright"] = function()
                 nvim_lsp["pyright"].setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities,
+                })
+            end,
+            ["gopls"] = function()
+                nvim_lsp["gopls"].setup({
                     on_attach = on_attach,
                     capabilities = capabilities,
                 })

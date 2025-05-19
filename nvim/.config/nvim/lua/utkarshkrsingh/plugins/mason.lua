@@ -17,6 +17,7 @@ return {
 				"ts_ls",
 				"pyright",
 				"tailwindcss",
+				"gopls",
 			},
 		})
 
