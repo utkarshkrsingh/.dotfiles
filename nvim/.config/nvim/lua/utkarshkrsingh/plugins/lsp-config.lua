@@ -16,9 +16,20 @@ return {
         	virtual_text = true,
         	signs = true,
         	underline = true,
-        	update_in_insert = false,
+        	update_in_insert = true,
         	severity_sort = true,
     	})
+
+		-- Show diagnostics in a floating window on CursorHold
+		vim.api.nvim_create_autocmd("CursorHold", {
+    		callback = function()
+        		vim.diagnostic.open_float(nil, {
+            		focusable = false,
+            		source = "if_many",
+            		border = "rounded" -- Optional: make it look cleaner
+        		})
+    		end,
+		})
 
         -- Setup nvim-autopairs integration
         local cmp_autopairs = require("nvim-autopairs.completion.cmp")
