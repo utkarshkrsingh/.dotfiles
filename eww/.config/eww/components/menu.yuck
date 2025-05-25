@@ -10,7 +10,7 @@
 
     (button     :class "menuBtn"
                 :tooltip "ArcMenu"
-                :onclick "" "")
+                :onclick "$HOME/.config/eww/scripts/setWallpaper" "")
 
     (revealer   :transition "slideright"
                 :reveal menu0
