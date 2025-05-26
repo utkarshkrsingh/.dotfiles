@@ -18,6 +18,7 @@ return {
             lua = { "stylua" },
             python = { "isort", "black" },
 			go = {"gofmt"},
+			c = {"clang-format"}
         }
 
         -- Filter out unavailable formatters
@@ -51,6 +52,13 @@ return {
 				gofmt = {
 				    prepend_args = { "-s" },
 				},
+				["clang-format"] = {
+                    -- You can customize clang-format arguments here
+                    args = {
+						"--style={BasedOnStyle: LLVM, IndentWidth: 4, TabWidth: 4, UseTab: Never}",
+                		"-fallback-style=LLVM"
+					},
+                },
             },
         })
 

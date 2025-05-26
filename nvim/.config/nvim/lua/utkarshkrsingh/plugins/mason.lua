@@ -18,6 +18,7 @@ return {
 				"pyright",
 				"tailwindcss",
 				"gopls",
+				"clangd",
 			},
 		})
 

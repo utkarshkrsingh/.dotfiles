@@ -124,6 +124,31 @@ return {
                     capabilities = capabilities,
                 })
             end,
+			["clangd"] = function()
+                nvim_lsp["clangd"].setup({
+                    on_attach = on_attach,
+                    capabilities = capabilities,
+                    cmd = {
+                        "clangd",
+                        "--background-index",
+                        "--clang-tidy",
+                        "--header-insertion=never",
+                        "--completion-style=detailed",
+                        "--function-arg-placeholders",
+                        "--fallback-style=llvm",
+                        "--query-driver=/usr/bin/clang*,/usr/local/bin/clang*"  -- Add your compiler paths
+                    },
+                    filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
+                    root_dir = function(fname)
+                        return nvim_lsp.util.root_pattern(
+                            'compile_commands.json',
+                            'compile_flags.txt',
+                            '.git'
+                        )(fname) or vim.fn.getcwd()
+                    end,
+                    single_file_support = true,
+                })
+            end,
         })
     end,
 }
