@@ -1,13 +1,47 @@
-# Screenshots
-![rice1](./assets/ss01.png)
-![rice2](./assets/ss02.png)
-![rice3](./assets/ss03.png)
-![rice4](./assets/ss04.png)
+<p align="center">
+  <img src="./assets/dotfiles.png" alt="Dotfiles Banner" width="600">
+</p>
 
-![eww-bar](./assets/eww-bar.gif)
+<h1 align="center">✨ Hyprland Dotfiles – Arch Linux Rice</h1>
+
+<p align="center">
+  A clean, modern, and minimal desktop setup using <strong>Hyprland</strong> on <strong>Arch Linux</strong>.<br>
+  Featuring a custom Eww bar, stylish Rofi menus, and a complete wayland environment.<br>
+  <strong>Make your desktop beautiful and productive!</strong>
+</p>
 
 ---
 
-<p>This is by far my latest <strong>Hyprland</strong> customization for <strong>Arch Linux</strong>.<br>Thank You 😁</p>
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td><img src="./assets/ss01.png" alt="screenshot 1"/></td>
+    <td><img src="./assets/ss02.png" alt="screenshot 2"/></td>
+  </tr>
+  <tr>
+    <td><img src="./assets/ss03.png" alt="screenshot 3"/></td>
+    <td><img src="./assets/ss04.png" alt="screenshot 4"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><img src="./assets/ss05.png" alt="screenshot 5" width="500"/></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><img src="./assets/eww-bar.gif" alt="eww bar gif" width="500"/></td>
+  </tr>
+</table>
 
 ---
+
+## 🧰 Features
+
+- ⚡ **Hyprland** – Dynamic tiling Wayland compositor
+- 🖱️ **Eww Widgets** – Animated system bar and widgets
+- 🎨 **Rofi** – Themed launcher and emoji picker
+- 🔋 Battery, date, music, and workspace widgets
+- 🧪 Fastfetch for system info
+- 🪟 Rounded/Pointed corners, shadows, blur & animations
+
+---
+
+Let me know if you want to turn this into a [live GitHub README preview](f) or want a [badge section](f) with things like license, language, stars, etc.

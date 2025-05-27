@@ -28,9 +28,9 @@ window {
 	transparency        :       "real";
 	width               :       20%;
     border              :       1px;
-	border-radius       :       10px;
+	border-radius       :       0px;
     border-color        :       @main-br;
-    background-color    :       @main-bg;
+    background-color    :       @item-bg;
 }
 
 prompt { enabled: false; }
@@ -42,7 +42,7 @@ entry {
 	placeholder-color   :       @main-fg;
 	expand              :       true;
 	padding             :       1%;
-	border-radius       :		10px;
+	border-radius       :		0px;
 }
 
 inputbar {
@@ -66,7 +66,7 @@ listview {
 
 mainbox {
     background-color    :       @main-bg;
-	border-radius       :       10px;
+	border-radius       :       0px;
 	children            :       [ inputbar, listview ]; 
 }
 
@@ -74,7 +74,7 @@ element {
 	orientation         :       horizontal;
 	padding             :       0.5% 0% 0.5% 0%;
 	border-radius       :       0px;
-    background-color    :       @main-bg;
+    background-color    :       @item-bg;
     color               :       @main-fg;
 }
 
@@ -82,14 +82,14 @@ element-text {
 	expand              :       true;
 	vertical-align      :       1.5%;
 	margin              :       0.5% 3% 0% 3%;
-	background-color    :       inherit;
-	text-color          :       inherit;
+	background-color    :       @item-bg;
+	text-color          :       @main-fg;
 }
 
 element selected {
 	background-color    :       @select-bg;
     color               :       @select-fg;
-	border-radius       :       5px;
+	border-radius       :       0px;
 }
 
 @media(max-aspect-ratio: 1.8) {

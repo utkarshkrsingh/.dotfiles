@@ -1,9 +1,10 @@
 * {
-    main-bg             :       #1e1e2e;
-    main-fg             :       #cdd6f4;
-    main-br             :       #89b4fa;
-    select-bg           :       #45475a;
-    select-fg           :       #89b4fa;
-    separatorcolor      :       transparent;
-    border-color        :       transparent;
+    main-bg             : rgba(30, 30, 46, 0.6);
+	item-bg				: rgba(30, 30, 46, 0.0);
+    main-fg             : rgba(205, 214, 244, 1.0);
+    main-br             : rgba(137, 180, 250, 0.4);
+    select-bg           : rgba(69, 71, 90, 0.3);
+    select-fg           : rgba(137, 180, 250, 1.0);
+    separatorcolor      : transparent;
+    border-color        : transparent;
 }

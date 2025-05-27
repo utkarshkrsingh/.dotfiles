@@ -6,9 +6,12 @@
   font-family: FantasqueSansM Nerd Font;
 }
 
-$barBackground: #11111b;
+// $barBackground: #11111b;
+$barBackground: rgba(17, 17, 27, 0.6);
 $transparent: transparent;
-$background: #11111b;
+// $background: #11111b;
+$background: rgba(17, 17, 27, 0.0);
+$toolTipBackground: rgba(17, 17, 27, 0.7);
 $background-light: #262636;
 $teal: #94e2d5;
 $magenta: #cba6f7;
@@ -25,13 +28,13 @@ $white: #cdd6f4;
   font-size: 1rem;
   padding: 5px;
   // border-bottom: 0.05rem solid $blue;
-  border-radius: 10px;
-  border: .1rem solid $blue;
+  border-radius: 0;
+  border: 1px solid $blue;
 }
 
 tooltip {
   all: unset;
-  background-color: $background;
+  background-color: $toolTipBackground;
   color: $white;
   border-radius: 5px;
 }

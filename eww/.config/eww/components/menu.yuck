@@ -9,7 +9,7 @@
                 :vexpand false
 
     (button     :class "menuBtn"
-                :tooltip "ArcMenu"
+                :tooltip "Swww"
                 :onclick "$HOME/.config/eww/scripts/setWallpaper" "")
 
     (revealer   :transition "slideright"
