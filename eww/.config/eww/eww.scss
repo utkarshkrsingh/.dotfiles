@@ -7,7 +7,7 @@
 }
 
 // $barBackground: #11111b;
-$barBackground: rgba(17, 17, 27, 0.6);
+$barBackground: rgba(17, 17, 27, 0.8);
 $transparent: transparent;
 // $background: #11111b;
 $background: rgba(17, 17, 27, 0.0);
@@ -20,6 +20,7 @@ $blue: #89b4fa;
 $green: #a6e3a1;
 $yellow: #f9e2af;
 $white: #cdd6f4;
+$border: #1e1e2e;
 
 .bar0,
 .bar1 {
@@ -29,7 +30,7 @@ $white: #cdd6f4;
   padding: 5px;
   // border-bottom: 0.05rem solid $blue;
   border-radius: 0;
-  border: 1px solid $blue;
+  border: 1px solid $border;
 }
 
 tooltip {
