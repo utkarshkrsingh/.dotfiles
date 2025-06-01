@@ -24,10 +24,9 @@
     <td><img src="./assets/ss04.png" alt="screenshot 4"/></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><img src="./assets/ss05.png" alt="screenshot 5" width="500"/></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><img src="./assets/eww-bar.gif" alt="eww bar gif" width="500"/></td>
+    <!-- <td colspan="2" align="center"><img src="./assets/ss05.png" alt="screenshot 5" width="500"/></td> -->
+    <td><img src="./assets/ss05.png" alt="screenshot 3"/></td>
+    <td><img src="./assets/ss06.png" alt="screenshot 4"/></td>
   </tr>
 </table>
 
@@ -36,12 +35,10 @@
 ## 🧰 Features
 
 - ⚡ **Hyprland** – Dynamic tiling Wayland compositor
-- 🖱️ **Eww Widgets** – Animated system bar and widgets
+- 🖱️ **Hyprpanel** – Animated system bar and widgets
 - 🎨 **Rofi** – Themed launcher and emoji picker
 - 🔋 Battery, date, music, and workspace widgets
 - 🧪 Fastfetch for system info
 - 🪟 Rounded/Pointed corners, shadows, blur & animations
 
 ---
-
-Let me know if you want to turn this into a [live GitHub README preview](f) or want a [badge section](f) with things like license, language, stars, etc.

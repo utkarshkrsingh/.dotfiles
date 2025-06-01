@@ -1,5 +1,0 @@
-(defwidget date []
-    (button :class "date"
-            :tooltip "Date"
-            :onclick "" currentDate)
-)

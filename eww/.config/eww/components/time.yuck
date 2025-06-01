@@ -1,3 +1,0 @@
-(defwidget time []
-    (button :class "time" :tooltip "Time" currentTime)
-)
