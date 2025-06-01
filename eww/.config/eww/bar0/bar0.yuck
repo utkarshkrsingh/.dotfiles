@@ -42,7 +42,7 @@
 )
 
 (defwidget bar0 []
-    (box  :class "centerbox"
+    (box  	:class "centerbox"
             :orientation "h"
 
             (leftSideBar0)

@@ -21,9 +21,11 @@ $green: #a6e3a1;
 $yellow: #f9e2af;
 $white: #cdd6f4;
 $border: #1e1e2e;
+$surface0: rgba(49, 50, 68, 0.3);
 
 .bar0,
-.bar1 {
+.bar1,
+.screenrecorder {
   all: unset;
   background-color: $barBackground;
   font-size: 1rem;
@@ -31,6 +33,11 @@ $border: #1e1e2e;
   // border-bottom: 0.05rem solid $blue;
   border-radius: 0;
   border: 1px solid $border;
+}
+
+.screenrecorder {
+  border: 1px solid $blue;
+  border-radius: 5px;
 }
 
 tooltip {
@@ -197,5 +204,38 @@ scale trough {
 }
 
 .btn-hyproff {
+  color: $red;
+}
+
+// Screen recorder
+.centerbox {
+  all: unset;
+  padding: 10px;
+}
+
+.recorderHeading {
+  color: $magenta;
+  font-size: 28px;
+}
+
+.recorderStartBtn,
+.recorderStopBtn {
+  all: unset;
+  background-color: $surface0;
+  font-size: 24px;
+  margin-right: 5px;
+  border-radius: 5px;
+  transition: 0.1s background-color ease-in-out;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.recorderStartBtn {
+  color: $green;
+}
+
+.recorderStopBtn {
   color: $red;
 }

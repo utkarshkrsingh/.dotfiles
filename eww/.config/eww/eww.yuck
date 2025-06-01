@@ -1,5 +1,6 @@
 (include "./bar0/bar0.yuck")
 (include "./bar1/bar1.yuck")
+(include "./screenrecorder/screenrecorder.yuck")
 
 (include "./variables/defvarVariables.yuck")
 (include "./variables/defpollVariables.yuck")

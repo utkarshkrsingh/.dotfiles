@@ -1,0 +1,35 @@
+(defwidget controls []
+	(box	:class "controlbox"
+			:orientation "h"
+
+	(button	:class "recorderStartBtn"
+			:tooltip "Start Recording"
+			:onclick "$HOME/.scripts/wlScreenrec.sh" "")
+
+	(button :class "recorderStopBtn"
+			:tooltip "Stop Recording"
+			:onclick "killall wl-screenrec" "")
+	)
+)
+
+(defwidget bar []
+	(box	:class "centerbox"
+			:orientation "v"
+	(label	:class "recorderHeading"
+			:text "Screen Recorder")
+	(controls)
+	)
+)
+
+(defwindow screenrecorder
+	:monitor 0
+	:geometry (geometry
+		:x	"0.3%"
+		:y	"0.5%"
+		:width	"15%"
+		:height	"100px"
+		:anchor	"top right"
+	)
+	:stacking	"fg"
+	:exclusive	false
+(bar))
