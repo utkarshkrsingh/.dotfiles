@@ -6,7 +6,7 @@
 
 <p align="center">
   A clean, modern, and minimal desktop setup using <strong>Hyprland</strong> on <strong>Arch Linux</strong>.<br>
-  Featuring a custom Eww bar, stylish Rofi menus, and a complete wayland environment.<br>
+  Featuring a custom Hyprpanel, stylish Rofi menus, and a complete wayland environment.<br>
   <strong>Make your desktop beautiful and productive!</strong>
 </p>
 
@@ -35,7 +35,7 @@
 ## 🧰 Features
 
 - ⚡ **Hyprland** – Dynamic tiling Wayland compositor
-- 🖱️ **Hyprpanel** – Animated system bar and widgets
+- 🖱️ **Hyprpanel** – Animated system bar with widgets
 - 🎨 **Rofi** – Themed launcher and emoji picker
 - 🔋 Battery, date, music, and workspace widgets
 - 🧪 Fastfetch for system info
