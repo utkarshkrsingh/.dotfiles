@@ -94,15 +94,6 @@ return {
 
         -- Configure all servers
         mason_lspconfig.setup({
-            -- Default handler for most servers
-            function(server_name)
-                require("lspconfig")[server_name].setup({
-                    on_attach = on_attach,
-                    capabilities = capabilities,
-                })
-            end,
-
-            -- Language-specific configurations
             ["ts_ls"] = function()
                 require("lspconfig").ts_ls.setup({
                     on_attach = on_attach,
@@ -164,8 +155,8 @@ return {
                             experimental = {
                                 classRegex = {
                                     "tw`([^`]*)",
-                                    "tw=\"([^\"]*)",
-                                    "tw={\"([^\"}]*)",
+                                    'tw="([^"]*)',
+                                    'tw={"([^"}]*)',
                                     "tw\\.\\w+`([^`]*)",
                                     "tw\\(.*?\\)`([^`]*)",
                                 },

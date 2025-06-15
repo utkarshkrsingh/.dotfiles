@@ -46,8 +46,7 @@ return {
                 diagnostics.shellcheck,
 
                 -- Go formatting
-                formatting.gofumpt,
-                formatting.goimports,
+                formatting.gopls,
             },
         })
 
@@ -56,7 +55,7 @@ return {
             vim.lsp.buf.format({
                 filter = function(client)
                     -- Use null-ls for formatting if available
-                    return client.name == "null-ls"
+                    return client.name == "null-ls" or client.supports_method("textDocument/formatting")
                 end,
                 async = true,
             })
@@ -65,10 +64,10 @@ return {
         -- Create an autocmd to format on save for specific filetypes
         vim.api.nvim_create_autocmd("BufWritePre", {
             callback = function()
-                if vim.tbl_contains({ "lua", "python", "cpp", "c", "go" }, vim.bo.filetype) then
+                if vim.tbl_contains({ "lua", "cpp", "c", "go" }, vim.bo.filetype) then
                     vim.lsp.buf.format({
                         filter = function(client)
-                            return client.name == "null-ls"
+                            return client.name == "null-ls" or client.supports_method("textDocument/formatting")
                         end,
                         async = false,
                     })

@@ -18,15 +18,21 @@ return {
                 "tailwindcss",
                 "gopls",
                 "clangd",
+                "lua_ls",
             },
         })
 
         require("mason-tool-installer").setup({
             ensure_installed = {
                 "prettier",
-                "stylua", -- lua formatter
+                "stylua",
                 "eslint_d",
-                "dockerls",
+                "shellcheck", -- For shell script diagnostics
+                "shfmt", -- For shell script formatting
+                "clang-format", -- For C/C++ formatting
+                -- "gofumpt", -- If available in Mason registry
+                -- "goimports", -- If available in Mason registry
+                -- "delve",
             },
         })
     end,
