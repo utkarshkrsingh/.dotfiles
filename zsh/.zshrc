@@ -56,3 +56,4 @@ source "${HOME}/.zshrc.d/tools.sh"
 [[ -f /home/utkarshkrsingh/.dart-cli-completion/zsh-config.zsh ]] && . /home/utkarshkrsingh/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+alias keploy='sudo -E env PATH="$PATH" keploy'
