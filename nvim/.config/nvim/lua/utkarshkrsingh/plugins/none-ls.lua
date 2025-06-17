@@ -34,9 +34,11 @@ return {
                     },
                 }),
 
-                -- C/C++ formatting
+                -- C/C++ formatting via null-ls
                 formatting.clang_format.with({
-                    extra_args = { "--style", "{BasedOnStyle: LLVM, IndentWidth: 4}" },
+                    extra_args = {
+                        "--style={BasedOnStyle: LLVM, IndentWidth: 4, UseTab: Never}",
+                    },
                 }),
 
                 -- Shell scripting
@@ -44,34 +46,42 @@ return {
                     extra_args = { "-i", "4" },
                 }),
                 diagnostics.shellcheck,
-
-                -- Go formatting
-                formatting.gopls,
             },
         })
 
-        -- Format keymap with LSP fallback
+        -- Filetypes you want to force through null-ls (e.g., for custom clang-format)
+        local prefer_null_ls = {
+            lua = true,
+            c = true,
+            cpp = true,
+            html = true,
+        }
+
+        -- Format keymap
         vim.keymap.set("n", "<leader>f", function()
             vim.lsp.buf.format({
                 filter = function(client)
-                    -- Use null-ls for formatting if available
-                    return client.name == "null-ls" or client.supports_method("textDocument/formatting")
+                    if prefer_null_ls[vim.bo.filetype] then
+                        return client.name == "null-ls"
+                    end
+                    return client.name ~= "null-ls"
                 end,
                 async = true,
             })
-        end, { desc = "Format file with null-ls" })
+        end, { desc = "Format file" })
 
-        -- Create an autocmd to format on save for specific filetypes
+        -- Format on save
         vim.api.nvim_create_autocmd("BufWritePre", {
             callback = function()
-                if vim.tbl_contains({ "lua", "cpp", "c", "go" }, vim.bo.filetype) then
-                    vim.lsp.buf.format({
-                        filter = function(client)
-                            return client.name == "null-ls" or client.supports_method("textDocument/formatting")
-                        end,
-                        async = false,
-                    })
-                end
+                vim.lsp.buf.format({
+                    filter = function(client)
+                        if prefer_null_ls[vim.bo.filetype] then
+                            return client.name == "null-ls"
+                        end
+                        return client.name ~= "null-ls"
+                    end,
+                    async = false,
+                })
             end,
         })
     end,
