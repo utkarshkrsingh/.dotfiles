@@ -1,7 +1,7 @@
 vim.g.mapleader = ","
 
 local function map(mode, lhs, rhs)
-	vim.keymap.set(mode, lhs, rhs, { silent = true })
+    vim.keymap.set(mode, lhs, rhs, { silent = true })
 end
 
 -- Save
@@ -35,3 +35,7 @@ map("n", "<C-Down>", "<C-w>-")
 map("n", "<Space><leader>", "<CMD>:bprev<CR>")
 map("n", "<Space>.", "<CMD>:bnext<CR>")
 map("n", "<Space>/", "<CMD>:bdelete | bnext<CR>")
+
+-- Split Screen
+map("n", "<leader>sh", "<CMD>vsplit<CR>")
+map("n", "<leader>sv", "<CMD>split<CR>")
