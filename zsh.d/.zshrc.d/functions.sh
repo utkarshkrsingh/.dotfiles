@@ -1,11 +1,3 @@
-rm() {
-  if [[ "$*" =~ (-rf|--force) ]] && [[ "$*" =~ (/\*|/\s|^/)$ ]]; then
-    echo "⚠️  Dangerous rm command blocked!"
-    return 1
-  fi
-  command rm "$@"
-}
-
 # wl-screenrec
 screenrec() {
     # Check if the directory exists

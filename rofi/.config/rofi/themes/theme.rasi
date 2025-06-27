@@ -1,5 +1,5 @@
 * {
-    main-bg             : rgba(30, 30, 46, 0.6);
+    main-bg             : rgba(30, 30, 46, 1);
 	item-bg				: rgba(30, 30, 46, 0.0);
     main-fg             : rgba(205, 214, 244, 1.0);
     main-br             : rgba(137, 180, 250, 0.4);

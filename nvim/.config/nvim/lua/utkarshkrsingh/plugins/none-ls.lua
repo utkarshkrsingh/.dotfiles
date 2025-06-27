@@ -31,6 +31,7 @@ return {
                         "json",
                         "yaml",
                         "markdown",
+                        "yaml",
                     },
                 }),
 
@@ -55,6 +56,7 @@ return {
             c = true,
             cpp = true,
             html = true,
+            yaml = true,
         }
 
         -- Format keymap

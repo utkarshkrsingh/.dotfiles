@@ -11,9 +11,9 @@ return {
         telescope.setup({
             extensions = {
                 ["ui-select"] = {
-                    require("telescope.themes").get_dropdown({}) -- You can customize this
-                }
-            }
+                    require("telescope.themes").get_dropdown({}), -- You can customize this
+                },
+            },
         })
 
         -- Load the ui-select extension
@@ -22,10 +22,14 @@ return {
         -- set keymaps
         local keymap = vim.keymap
 
-        keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-        keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Fuzzy find recent files" })
-        keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Find string in cwd" })
-        keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", { desc = "Find string under cursor in cwd" })
-        keymap.set("n", "<leader>fc", "<cmd>Telescope git_commits<cr>", { desc = "Find todos" })
+        -- keymap.set("n", "<space><space>", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
+
+        keymap.set("n", "<space><space>", function()
+            require("telescope.builtin").find_files({ hidden = true })
+        end, { desc = "Fuzzy find files (including dotfiles)" })
+        keymap.set("n", "<space>fg", "<cmd>Telescope live_grep<cr>", { desc = "Search string in cwd" }) -- was "Fuzzy find recent files"
+        keymap.set("n", "<space>fb", "<cmd>Telescope buffers<cr>", { desc = "List open buffers" }) -- was "Find string in cwd"
+        keymap.set("n", "<space>fs", "<cmd>Telescope git_status<cr>", { desc = "View Git status" }) -- was "Find string under cursor in cwd"
+        keymap.set("n", "<space>fc", "<cmd>Telescope git_commits<cr>", { desc = "Browse Git commits" }) -- was "Find todos"
     end,
 }
