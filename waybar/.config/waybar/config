@@ -125,7 +125,7 @@
     "custom/update": {
         "interval" : 300,
         "return-type" : "string",
-        "exec" : "~/.config/waybar/modules/checkupdate.sh",
+        "exec" : "~/.config/waybar/modules/checkupdates/checkupdate",
         "tooltip" : false,
         "on-click" : "setsid -f foot -e zsh -ic update-system"
     },
@@ -133,7 +133,7 @@
     "custom/clock": {
         "interval": 1,
         "return-type": "string",
-        "exec": "~/.config/waybar/modules/clock.sh",
+        "exec": "~/.config/waybar/modules/clock/clock",
         "tooltip": false,
         "format": " {} ",
         "padding": 0
@@ -142,7 +142,7 @@
     "custom/date": {
         "interval": 1,
         "return-type": "string",
-        "exec": "~/.config/waybar/modules/date.sh",
+        "exec": "~/.config/waybar/modules/date/date",
         "tooltip": false,
         "format": " {} ",
         "padding": 0
