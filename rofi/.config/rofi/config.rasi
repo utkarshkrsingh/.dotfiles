@@ -12,7 +12,7 @@
 // Config //
 configuration {
 	modi                :       "drun";
-	font                :		"Iosevka Nerd Font 10";
+	font                :		"JetBrainsMono Nerd Font 10";
     icon-theme          :       "oomox-Catppuccin-Mocha";
     show-icons          :       true;
 	display-drun        : 		"Applications:";

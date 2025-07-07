@@ -1,11 +1,11 @@
-include catppuccin-mocha
+include tokyonight
 set window-title-home-tilde true  # Use tilde for home directory in the window title
 set window-title-format "[zathura] {title}"  # Custom window title format
 set statusbar-h-padding 2  # Horizontal padding for the status bar
 set statusbar-v-padding 2  # Vertical padding for the status bar
 
 # Font settings
-set font "Iosevka Nerd Font 12"
+set font "JetBrainsMono Nerd Font 12"
 
 # Plugin specific settings
 plugin {
