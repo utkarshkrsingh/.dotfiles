@@ -1,3 +1,2 @@
-require("utkarshkrsingh.settings")
-require("utkarshkrsingh.maps")
-require("utkarshkrsingh.lazy")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

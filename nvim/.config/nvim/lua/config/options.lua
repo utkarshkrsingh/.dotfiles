@@ -1,4 +1,6 @@
-local global = vim.g
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
 local o = vim.opt
 
 -- Editor Options
@@ -9,8 +11,9 @@ o.clipboard = "unnamedplus"
 o.syntax = "on"
 o.autoindent = true
 o.cursorline = true
-o.shiftwidth = 4
-o.tabstop = 4
+o.shiftwidth = 2
+o.tabstop = 2
+o.expandtab = true
 o.encoding = "UTF-8"
 o.ruler = true
 o.mouse = "a"
@@ -29,5 +32,5 @@ o.termguicolors = true
 
 vim.api.nvim_create_autocmd("VimLeave", {
   pattern = "*",
-  command = "set guicursor=a:ver25"
+  command = "set guicursor=a:ver25",
 })
