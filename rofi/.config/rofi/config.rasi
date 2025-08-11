@@ -28,7 +28,7 @@ window {
 	transparency        :       "real";
 	width               :       20%;
     border              :       1px;
-	border-radius       :       0px;
+	border-radius       :       5px;
     border-color        :       @main-br;
     background-color    :       @item-bg;
 }
@@ -42,7 +42,7 @@ entry {
 	placeholder-color   :       @main-fg;
 	expand              :       true;
 	padding             :       1%;
-	border-radius       :		0px;
+	border-radius       :		5px;
 }
 
 inputbar {
