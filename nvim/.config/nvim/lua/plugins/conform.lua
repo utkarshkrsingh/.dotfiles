@@ -12,6 +12,10 @@ return {
             yaml = { "prettier" },
             c = { "clang_format" },
             cpp = { "clang_format" },
+            css = { "prettier" },
+            scss = { "prettier" },
+            less = { "prettier" },
+            html = { "prettier" },
         },
         formatters = {
             prettier = {

@@ -1,0 +1,24 @@
+/* Tokyo Night color palette */
+:root {
+    --bg: #1a1b26;
+    --fg: #c0caf5;
+    --blue: #7aa2f7;
+    --cyan: #7dcfff;
+    --purple: #bb9af7;
+    --green: #9ece6a;
+    --red: #f7768e;
+    --yellow: #e0af68;
+}
+
+body {
+    margin: 0;
+    font-family: "FantasqueSansM Nerd Font";
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+}

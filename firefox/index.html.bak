@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefox Coder Home</title>
+    <style>
+        /* Tokyo Night color palette */
+        :root {
+            --bg: #1a1b26;
+            --fg: #c0caf5;
+            --blue: #7aa2f7;
+            --cyan: #7dcfff;
+            --purple: #bb9af7;
+            --green: #9ece6a;
+            --red: #f7768e;
+            --yellow: #e0af68;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Fira Code", monospace;
+            background-color: var(--bg);
+            color: var(--fg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--blue);
+            font-size: 2rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            border-right: 3px solid var(--cyan);
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(20) forwards, blink 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 15ch;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        #clock {
+            font-size: 1.2rem;
+            color: var(--cyan);
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 8px 0 0 8px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            background-color: #24283b;
+            color: var(--fg);
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: var(--blue);
+            color: white;
+            font-size: 1rem;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: var(--purple);
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .link-card {
+            background-color: #24283b;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--fg);
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .link-card:hover {
+            background-color: var(--blue);
+            transform: scale(1.05);
+            color: white;
+        }
+
+        @media (max-width: 500px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="welcome">Welcome, Coder!</h1>
+    <div id="clock"></div>
+
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Search the web...">
+        <button onclick="search()">Go</button>
+    </div>
+
+    <div class="links">
+        <a href="https://github.com" class="link-card">GitHub</a>
+        <a href="https://stackoverflow.com" class="link-card">Stack Overflow</a>
+        <a href="https://developer.mozilla.org" class="link-card">MDN</a>
+        <a href="https://codepen.io" class="link-card">CodePen</a>
+        <a href="https://news.ycombinator.com" class="link-card">Hacker News</a>
+        <a href="https://openai.com" class="link-card">OpenAI</a>
+    </div>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').textContent =
+                now.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) +
+                " | " + now.toLocaleDateString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        function search() {
+            const query = document.getElementById('search').value;
+            if (query) {
+                window.location.href = `https://duckduckgo.com/?q=${encodeURIComponent(query)}`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>
