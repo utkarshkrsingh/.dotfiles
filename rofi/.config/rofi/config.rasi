@@ -89,7 +89,7 @@ element-text {
 element selected {
 	background-color    :       @select-bg;
     color               :       @select-fg;
-	border-radius       :       0px;
+	border-radius       :       5px;
 }
 
 @media(max-aspect-ratio: 1.8) {

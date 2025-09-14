@@ -6,8 +6,10 @@
 }
 
 window#waybar {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(26, 27, 38, 1.0);
     transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    border: 1px solid rgba(26, 27, 38, 1);
 }
 
 window#waybar.hidden {
@@ -49,8 +51,9 @@ button:hover {
 }
 
 #workspaces {
+    background: transparent;
     border-radius: 5px;
-    padding: 0 0px;
+    padding: 0 2px 0 0;
     margin: 5px 0px;
 }
 
@@ -73,6 +76,7 @@ button:hover {
 #battery,
 #window,
 #tray {
+    background: transparent;
     border-radius: 5px;
     padding: 0 0px;
     margin: 5px 0px;
@@ -80,13 +84,13 @@ button:hover {
 
 #window {
     background-color: transparent;
-    border-radius: 0px;
+    border-radius: 5px;
     padding: 0 0px;
     border: none;
 }
 
 #battery {
-    padding-right: 14px;
+    padding-right: 16px;
 }
 
 #battery.charging,
@@ -135,26 +139,19 @@ button:hover {
 }
 
 #custom-powerOption {
+    color: rgb(247, 118, 142);
     padding-left: 10px;
-    padding-right: 16px;
+    padding-right: 17px;
     margin-right: 5px;
     font-size: 20px;
 }
 
-#custom-powerOption:hover {
-    font-size: 24px;
-    padding-right: 20px;
-}
-
 #custom-rmenu {
+    color: rgb(122, 162, 247);
     padding-left: 10px;
-    padding-right: 15px;
+    padding-right: 16px;
     margin-left: 5px;
     font-size: 20px;
-}
-
-#custom-rmenu:hover {
-    font-size: 24px;
 }
 
 #custom-update {

@@ -1,9 +1,9 @@
 * {
-    main-bg             : rgba(26, 27, 38, 1);        /* Editor Background (Night) */
+    main-bg             : rgba(26, 27, 38, 1.0);        /* Editor Background (Night) */
     item-bg             : rgba(26, 27, 38, 0.0);      /* Transparent over background */
     main-fg             : rgba(169, 177, 214, 1.0);   /* Foreground / Editor Foreground */
-    main-br             : rgba(122, 162, 247, 0.4);   /* Terminal Blue / Secondary */
-    select-bg           : rgba(36, 40, 59, 0.3);      /* Editor Background (Storm) at 30% opacity */
+    main-br             : rgba(122, 162, 247, 0.0);   /* Terminal Blue / Secondary */
+    select-bg           : rgba(36, 40, 59, 1);      /* Editor Background (Storm) at 30% opacity */
     select-fg           : rgba(122, 162, 247, 1.0);   /* Terminal Blue / Secondary */
     separatorcolor      : transparent;
     border-color        : transparent;
