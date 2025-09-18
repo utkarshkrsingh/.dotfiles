@@ -1,11 +1,12 @@
 return {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opt = {
         ensure_installed = {
             "clangd",
             "clangd-format",
             "codelldb",
             "asm-lsp",
+            "cmake-language-server",
         },
     },
 }
