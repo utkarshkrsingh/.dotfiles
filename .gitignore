@@ -1,5 +1,6 @@
 **/lazy-lock.json
 **/btop.log
 *.json
+.DS_Store
 !hyprpanel_config.json
 !hyprpanel_theme.json
