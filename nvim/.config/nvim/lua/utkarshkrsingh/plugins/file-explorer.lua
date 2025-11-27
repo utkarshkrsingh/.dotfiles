@@ -5,9 +5,10 @@ return {
         'nvim-tree/nvim-web-devicons',
     },
     keys = {
-        { '<leader>e', '<cmd>NvimTreeToggle<CR>', desc = 'Explorer: Toggle file tree' },
+        { '<leader>e', '<cmd>NvimTreeToggle<CR>',   desc = 'Explorer: Toggle file tree' },
         -- { '<leader>fe', '<cmd>NvimTreeFindFile<CR>', desc = 'Explorer: Find current file' },
-        { '<leader>o', '<cmd>NvimTreeFocus<CR>',  desc = 'Explorer: Focus file tree' },
+        { '<leader>o', '<cmd>NvimTreeFocus<CR>',    desc = 'Explorer: Focus file tree' },
+        { ' q',        '<cmd>NvimTreeFindFile<CR>', desc = 'Explorer: Find files in file tree' }
     },
     config = function()
         -- Disable netrw (strongly advised by nvim-tree)
@@ -27,11 +28,11 @@ return {
                         default = '',
                         symlink = '',
                         folder = {
-                            arrow_open = '',
-                            arrow_closed = '',
+                            arrow_open = '󱞡',
+                            arrow_closed = '󱞩',
                             default = '',
                             open = '',
-                            empty = '',
+                            empty = '󰉖',
                             empty_open = '',
                             symlink = '',
                             symlink_open = '',
@@ -53,7 +54,7 @@ return {
             },
             actions = {
                 open_file = {
-                    quit_on_open = true,
+                    quit_on_open = false,
                 },
             },
         })

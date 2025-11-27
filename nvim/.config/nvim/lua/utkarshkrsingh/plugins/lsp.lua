@@ -8,6 +8,17 @@ return {
         },
         config = function()
             local lspconfig = require("lspconfig")
+            -- Enable inline diagnostics!
+            vim.diagnostic.config({
+                virtual_text = {
+                    prefix = "●",
+                    spacing = 2,
+                },
+                signs = true,
+                underline = true,
+                severity_sort = true,
+                update_in_insert = false,
+            })
 
             -- Fix capabilities
             local lsp_defaults = lspconfig.util.default_config
@@ -67,6 +78,7 @@ return {
                     "html",
                     "cssls",
                     "dockerls",
+                    "rust_analyzer",
                 },
                 automatic_installation = true,
             })

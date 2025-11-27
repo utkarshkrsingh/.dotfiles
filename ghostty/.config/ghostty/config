@@ -1,0 +1,20 @@
+# Font
+font-family = "FantasqueSansM Nerd Font"
+font-size = 16
+
+# Transparency
+background-opacity = 0.8
+
+# Cursor
+cursor-style = bar
+
+# Window size
+window-width = 2000
+window-height = 1000
+
+# Window Padding
+window-padding-x = 15
+window-padding-y = 15
+
+# Theme
+theme = TokyoNight Night

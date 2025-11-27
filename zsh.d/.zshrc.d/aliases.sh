@@ -11,6 +11,4 @@ alias gitlink="git remote set-url origin " ## gitlink https://<GITHUB-TOKEN>@git
 
 # alias code="code --ozone-platform=wayland"
 
-alias battery-life="upower -i $(upower -e | grep 'BAT')"
-
 alias fastfetch="fastfetch --logo-color-1 magenta --logo $HOME/.config/fastfetch/logo/not-gui.txt"
