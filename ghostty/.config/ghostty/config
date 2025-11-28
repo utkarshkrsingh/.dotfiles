@@ -1,9 +1,10 @@
 # Font
-font-family = "FantasqueSansM Nerd Font"
-font-size = 16
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
 
 # Transparency
 background-opacity = 0.8
+background-blur-radius = 20
 
 # Cursor
 cursor-style = bar
@@ -18,3 +19,6 @@ window-padding-y = 15
 
 # Theme
 theme = TokyoNight Night
+
+# Mouse
+mouse-hide-while-typing = true
