@@ -1,4 +1,5 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/plugins/lualine.lua
+
 return {
     {
         "nvim-lualine/lualine.nvim",
@@ -6,7 +7,6 @@ return {
             "nvim-tree/nvim-web-devicons"
         },
         config = function()
-            -- Basic setup
             require('lualine').setup({
                 options = {
                     theme = 'tokyonight-night',
@@ -32,6 +32,13 @@ return {
                     lualine_z = {}
                 },
             })
+
+            -- Make lualine transparent
+            for _, mode in ipairs({ "normal", "insert", "visual", "replace", "command", "inactive" }) do
+                for _, section in ipairs({ "a", "b", "c", "x", "y", "z" }) do
+                    vim.api.nvim_set_hl(0, "lualine_" .. section .. "_" .. mode, { bg = "none" })
+                end
+            end
         end
     }
 }
