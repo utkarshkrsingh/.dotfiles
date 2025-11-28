@@ -16,7 +16,8 @@ return {
             scss = { "prettier" },
             less = { "prettier" },
             html = { "prettier" },
-            rust = { "rustfmt" }
+            rust = { "rustfmt" },
+            java = { "google-java-format" }
         },
         formatters = {
             prettier = {

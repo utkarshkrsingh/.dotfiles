@@ -18,6 +18,11 @@ return {
                 underline = true,
                 severity_sort = true,
                 update_in_insert = false,
+                float = {
+                    border = "rounded",
+                    source = "always",
+                    prefix = "●",
+                }
             })
 
             -- Fix capabilities
@@ -27,6 +32,17 @@ return {
                 lsp_defaults.capabilities,
                 require("cmp_nvim_lsp").default_capabilities()
             )
+
+            -- Custom border styles for LSP handlers
+            local border = "rounded"
+
+            -- Apply borders to all LSP handlers
+            local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
+            function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
+                opts = opts or {}
+                opts.border = opts.border or border
+                return orig_util_open_floating_preview(contents, syntax, opts, ...)
+            end
 
             -- LSP keymaps
             vim.api.nvim_create_autocmd("LspAttach", {
@@ -44,6 +60,33 @@ return {
                     vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
                 end
             })
+
+            -- Configure hover with border
+            vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
+                vim.lsp.handlers.hover, {
+                    border = border
+                }
+            )
+
+            -- Configure signature help with border
+            vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+                vim.lsp.handlers.signature_help, {
+                    border = border
+                }
+            )
+
+            -- Configure diagnostics with border
+            vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+                vim.lsp.diagnostic.on_publish_diagnostics, {
+                    virtual_text = {
+                        prefix = "●",
+                        spacing = 2,
+                    },
+                    float = {
+                        border = border
+                    }
+                }
+            )
         end
     },
     {
@@ -79,6 +122,7 @@ return {
                     "cssls",
                     "dockerls",
                     "rust_analyzer",
+                    "angularls",
                 },
                 automatic_installation = true,
             })
