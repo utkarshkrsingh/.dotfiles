@@ -54,6 +54,18 @@ return {
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
 
+            formatting = {
+                format = function(entry, item)
+                    item.menu = ({
+                        nvim_lsp = "[LSP]",
+                        buffer = "[Buffer]",
+                        path = "[Path]",
+                        luasnip = "[Snippet]",
+                    })[entry.source.name]
+                    return item
+                end,
+            },
+
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "luasnip" },

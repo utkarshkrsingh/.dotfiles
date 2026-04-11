@@ -10,5 +10,10 @@ return {
             sidebars = "transparent",
             floats = "transparent",
         },
+        on_highlights = function(hl, c)
+            -- make cursor line fully transparent
+            hl.CursorLine = { bg = "none" }
+            hl.CursorColumn = { bg = c.bg_highlight }
+        end,
     },
 }

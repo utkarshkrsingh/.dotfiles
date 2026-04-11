@@ -1,5 +1,4 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/plugins/lualine.lua
-
 return {
     {
         "nvim-lualine/lualine.nvim",
@@ -10,8 +9,8 @@ return {
             require('lualine').setup({
                 options = {
                     theme = 'tokyonight-night',
-                    section_separators = { '', '' },
-                    component_separators = { '', '' },
+                    section_separators = { left = "", right = "" },
+                    component_separators = { left = "", right = "" },
                     icons_enabled = true,
                     globalstatus = true,
                 },
@@ -32,13 +31,6 @@ return {
                     lualine_z = {}
                 },
             })
-
-            -- Make lualine transparent
-            for _, mode in ipairs({ "normal", "insert", "visual", "replace", "command", "inactive" }) do
-                for _, section in ipairs({ "a", "b", "c", "x", "y", "z" }) do
-                    vim.api.nvim_set_hl(0, "lualine_" .. section .. "_" .. mode, { bg = "none" })
-                end
-            end
         end
     }
 }

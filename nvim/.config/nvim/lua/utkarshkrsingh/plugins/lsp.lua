@@ -25,12 +25,16 @@ return {
                 }
             })
 
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
+            capabilities.textDocument.completion.completionItem.documentationFormat = { "markdown", "plaintext" }
+
             -- Fix capabilities
             local lsp_defaults = lspconfig.util.default_config
             lsp_defaults.capabilities = vim.tbl_deep_extend(
                 "force",
                 lsp_defaults.capabilities,
-                require("cmp_nvim_lsp").default_capabilities()
+                capabilities
+            -- require("cmp_nvim_lsp").default_capabilities()
             )
 
             -- Custom border styles for LSP handlers
@@ -57,7 +61,7 @@ return {
                     vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
                     vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
                     vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opt)
-                    vim.keymap.set("n", "<F4>", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+                    vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
                 end
             })
 
@@ -123,6 +127,7 @@ return {
                     "dockerls",
                     "rust_analyzer",
                     "angularls",
+                    "eslint",
                 },
                 automatic_installation = true,
             })
