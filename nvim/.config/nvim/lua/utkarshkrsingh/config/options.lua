@@ -26,3 +26,12 @@ o.inccommand = "split"
 o.splitright = true
 o.splitbelow = true
 o.termguicolors = true
+
+-- Terminal Auto-Command
+vim.api.nvim_create_autocmd('TermOpen', {
+    group = vim.api.nvim_create_augroup('custom-term-open', { clear = true }),
+    callback = function()
+        o.number = false
+        o.relativenumber = false
+    end
+})
