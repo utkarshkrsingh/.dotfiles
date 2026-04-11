@@ -1,4 +1,5 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/config/keymaps.lua
+
 local primaryKey = " "
 
 -- Saving and exiting
@@ -16,7 +17,7 @@ vim.keymap.set('n', primaryKey .. 's', ":vsplit<CR>", { noremap = true, silent =
 vim.keymap.set('n', primaryKey .. 'vs', ":split<CR>", { noremap = true, silent = true })
 
 -- Terminal Keymap
-vim.keymap.set('n', primaryKey .. 'st', function()
+vim.keymap.set('n', '<leader>t', function()
     vim.cmd.vnew()
     vim.cmd.term()
     vim.cmd.wincmd("J")
