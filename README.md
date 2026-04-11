@@ -52,7 +52,7 @@
 
 - macOS Sequoia or newer (ARM recommended)
 - Homebrew
-- Nerd Fonts installed (recommended: FantasqueSansM Nerd Font)
+- Nerd Fonts installed (recommended: ProFont IIx Nerd Font)
 - Stow (for dotfiles management)
 
 ---
