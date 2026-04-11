@@ -2,6 +2,9 @@
 # 🌙 TOKYO NIGHT SPLIT PROMPT
 # ----------------------------
 
+
+add_newline = false
+
 format = """
 $line_break\
 $username$directory$git_branch$git_status$time\
@@ -53,8 +56,3 @@ style = "fg:#9ece6a"
 [character]
 success_symbol = "[λ](bold #7dcfff)"
 error_symbol = "[λ](bold #f7768e)"
-
-# ----------------------------
-# ✨ OPTIONAL SPACING TWEAK
-# ----------------------------
-add_newline = false
