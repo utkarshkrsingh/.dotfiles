@@ -15,11 +15,3 @@ vim.keymap.set("n", primaryKey .. "/", ":bnext | bdelete #<CR>", { noremap = tru
 -- Spliting buffer
 vim.keymap.set('n', primaryKey .. 's', ":vsplit<CR>", { noremap = true, silent = true })
 vim.keymap.set('n', primaryKey .. 'vs', ":split<CR>", { noremap = true, silent = true })
-
--- Terminal Keymap
-vim.keymap.set('n', '<leader>t', function()
-    vim.cmd.vnew()
-    vim.cmd.term()
-    vim.cmd.wincmd("J")
-    vim.api.nvim_win_set_height(0, 15)
-end)
