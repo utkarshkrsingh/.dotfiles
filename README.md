@@ -62,6 +62,6 @@
 Clone the repo:
 
 ```bash
-git clone https://github.com/utkarshkrsingh/dotfiles ~/.dotfiles
+git clone https://github.com/utkarshkrsingh/.dotfiles ~/.dotfiles
 cd ~/.dotfiles
 ```
