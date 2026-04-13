@@ -1,3 +1,4 @@
+-- ~/.config/nvim/lua/utkarshkrsingh/plugins/toggleterm.lua
 return {
     {
         "akinsho/toggleterm.nvim",

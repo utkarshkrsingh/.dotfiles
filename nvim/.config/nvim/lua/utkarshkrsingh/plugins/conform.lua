@@ -1,32 +1,28 @@
+-- ~/.config/nvim/lua/utkarshkrsingh/plugins/conform.lua
 return {
     "stevearc/conform.nvim",
+    event = "BufWritePre",
     opts = {
-        format_on_save = { timeout_ms = 500, lsp_fallback = true },
-
+        format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
         formatters_by_ft = {
             lua = { "stylua" },
             python = { "black" },
-
-            -- JS / TS / React
             javascript = { "prettier" },
             typescript = { "prettier" },
-            javascriptreact = { "prettier" }, -- ← JSX support
-            typescriptreact = { "prettier" }, -- ← TSX support
+            javascriptreact = { "prettier" },
+            typescriptreact = { "prettier" },
             astro = { "prettier" },
-
             json = { "prettier" },
             yaml = { "prettier" },
             css = { "prettier" },
             scss = { "prettier" },
             less = { "prettier" },
             html = { "prettier" },
-
             c = { "clang_format" },
             cpp = { "clang_format" },
-
             rust = { "rustfmt" },
+            go = { "goimports", "gofmt" },
         },
-
         formatters = {
             prettier = {
                 prepend_args = {

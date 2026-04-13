@@ -2,13 +2,14 @@
 return {
     {
         "neovim/nvim-lspconfig",
+        event = { "BufReadPre", "BufNewFile" },
         dependencies = {
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/nvim-cmp",
         },
         config = function()
             local lspconfig = require("lspconfig")
-            -- Enable inline diagnostics!
+
             vim.diagnostic.config({
                 virtual_text = {
                     prefix = "●",
@@ -28,19 +29,17 @@ return {
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             capabilities.textDocument.completion.completionItem.documentationFormat = { "markdown", "plaintext" }
 
-            -- Fix capabilities
             local lsp_defaults = lspconfig.util.default_config
             lsp_defaults.capabilities = vim.tbl_deep_extend(
                 "force",
                 lsp_defaults.capabilities,
                 capabilities
-            -- require("cmp_nvim_lsp").default_capabilities()
             )
 
-            -- Custom border styles for LSP handlers
             local border = "rounded"
 
-            -- Apply borders to all LSP handlers
+            -- This globally sets borders for ALL LSP floating windows (Hover, Signature, etc.)
+            -- This makes the deprecated vim.lsp.with() unnecessary.
             local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
             function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
                 opts = opts or {}
@@ -48,109 +47,72 @@ return {
                 return orig_util_open_floating_preview(contents, syntax, opts, ...)
             end
 
-            -- LSP keymaps
+            -- LSP keymaps (buffer-local)
             vim.api.nvim_create_autocmd("LspAttach", {
                 callback = function(event)
-                    local opt = { buffer = event.buf }
-                    vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opt)
-                    vim.keymap.set("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opt)
-                    vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opt)
-                    vim.keymap.set("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
-                    vim.keymap.set("n", "go", "<cmd>lua vim.lsp.buf.type_definition()<CR>", opt)
-                    vim.keymap.set("n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opt)
-                    vim.keymap.set("n", "gs", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opt)
-                    vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<CR>", opt)
-                    vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({ async = true })<CR>", opt)
-                    vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opt)
+                    local opt = function(desc)
+                        return { buffer = event.buf, noremap = true, silent = true, desc = desc }
+                    end
+                    vim.keymap.set("n", "gd", vim.lsp.buf.definition, opt("LSP definition"))
+                    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opt("LSP declaration"))
+                    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opt("LSP implementation"))
+                    vim.keymap.set("n", "go", vim.lsp.buf.type_definition, opt("LSP type definition"))
+                    vim.keymap.set("n", "gr", vim.lsp.buf.references, opt("LSP references"))
+                    vim.keymap.set("n", "gs", vim.lsp.buf.signature_help, opt("LSP signature help"))
+                    vim.keymap.set("n", "K", vim.lsp.buf.hover, opt("LSP hover"))
+                    vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opt("LSP rename"))
+                    vim.keymap.set({ "n", "x" }, "<F3>", function() vim.lsp.buf.format({ async = true }) end,
+                        opt("LSP format"))
+                    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opt("Code action"))
                 end
             })
-
-            -- Configure hover with border
-            vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-                vim.lsp.handlers.hover, {
-                    border = border
-                }
-            )
-
-            -- Configure signature help with border
-            vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-                vim.lsp.handlers.signature_help, {
-                    border = border
-                }
-            )
-
-            -- Configure diagnostics with border
-            vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-                vim.lsp.diagnostic.on_publish_diagnostics, {
-                    virtual_text = {
-                        prefix = "●",
-                        spacing = 2,
-                    },
-                    float = {
-                        border = border
-                    }
-                }
-            )
         end
     },
     {
         "mason-org/mason.nvim",
         cmd = "Mason",
         config = function()
-            require("mason").setup({
-                ensure_installed = {
-                    "clang-format",
-                    "prettier"
-                },
-                automatic_installation = true,
-            })
+            require("mason").setup()
         end
     },
     {
         "mason-org/mason-lspconfig.nvim",
+        event = { "BufReadPre", "BufNewFile" },
         dependencies = {
             "neovim/nvim-lspconfig",
-            "mason-org/mason.nvim"
+            "mason-org/mason.nvim",
         },
         config = function()
             local lspconfig = require("lspconfig")
 
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "lua_ls",
-                    "clangd",
-                    "ts_ls",
-                    "tailwindcss",
-                    "gopls",
-                    "html",
-                    "cssls",
-                    "dockerls",
-                    "rust_analyzer",
-                    "angularls",
-                    "eslint",
+                    "lua_ls", "clangd", "ts_ls", "tailwindcss",
+                    "gopls", "html", "cssls", "dockerls",
+                    "rust_analyzer", "angularls", "eslint",
                 },
                 automatic_installation = true,
-            })
-
-            require("mason-lspconfig").setup({
-                function(server_name)
-                    lspconfig[server_name].setup({
-                        on_attach = function(client, bufnr)
-                            vim.api.nvim_create_autocmd("CursorHold", {
-                                buffer = bufnr,
-                                callback = function()
-                                    vim.diagnostic.open_float(nil, {
-                                        focusable = false,
-                                        close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
-                                        border = "rounded",
-                                        source = "always",
-                                        prefix = "●",
-                                    })
-                                end
-                            })
-                        end
-                    })
-                end
+                handlers = {
+                    function(server_name)
+                        lspconfig[server_name].setup({
+                            on_attach = function(_, bufnr)
+                                -- Auto-open diagnostics on hover
+                                vim.api.nvim_create_autocmd("CursorHold", {
+                                    buffer = bufnr,
+                                    callback = function()
+                                        vim.diagnostic.open_float(nil, {
+                                            focusable = false,
+                                            close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+                                            border = "rounded",
+                                            source = "always",
+                                            prefix = "●",
+                                        })
+                                    end
+                                })
+                            end
+                        })
+                    end
+                },
             })
         end
     }

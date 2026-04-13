@@ -1,3 +1,4 @@
+-- ~/.config/nvim/lua/utkarshkrsingh/plugins/lazygit.lua
 return {
     "kdheepak/lazygit.nvim",
     cmd = {

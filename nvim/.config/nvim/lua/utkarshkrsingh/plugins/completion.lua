@@ -1,7 +1,7 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/plugins/completion.lua
 return {
     "hrsh7th/nvim-cmp",
-    event = "InsertEnter",
+    event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
         "hrsh7th/cmp-cmdline",
         "hrsh7th/cmp-path",
@@ -14,21 +14,17 @@ return {
     config = function()
         local cmp = require("cmp")
         local luasnip = require("luasnip")
-
         require("luasnip.loaders.from_vscode").lazy_load()
-
         luasnip.config.set_config({
             history = true,
             updateevents = "TextChanged,TextChangedI",
         })
-
         cmp.setup({
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
                 end,
             },
-
             mapping = cmp.mapping.preset.insert({
                 ["<Tab>"] = function(fallback)
                     if cmp.visible() then
@@ -39,7 +35,6 @@ return {
                         fallback()
                     end
                 end,
-
                 ["<S-Tab>"] = function(fallback)
                     if cmp.visible() then
                         cmp.select_prev_item()
@@ -49,11 +44,9 @@ return {
                         fallback()
                     end
                 end,
-
                 ["<C-e>"] = cmp.mapping.abort(),
                 ["<CR>"] = cmp.mapping.confirm({ select = true }),
             }),
-
             formatting = {
                 format = function(entry, item)
                     item.menu = ({
@@ -65,27 +58,23 @@ return {
                     return item
                 end,
             },
-
             sources = cmp.config.sources({
                 { name = "nvim_lsp" },
                 { name = "luasnip" },
                 { name = "buffer" },
                 { name = "path" },
             }),
-
             window = {
                 completion = cmp.config.window.bordered(),
                 documentation = cmp.config.window.bordered(),
             },
         })
-
         cmp.setup.cmdline("/", {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
                 { name = "buffer" },
             },
         })
-
         cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),
             sources = cmp.config.sources({

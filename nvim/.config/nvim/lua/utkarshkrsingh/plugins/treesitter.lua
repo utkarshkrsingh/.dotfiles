@@ -1,14 +1,18 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/plugins/treesitter.lua
 return {
-    "nvim-treesitter/nvim-treesitter",
-    run = ":TSUpdate",
+    "romus204/tree-sitter-manager.nvim",
+    lazy = false,
     config = function()
-        require("nvim-treesitter.configs").setup({
-            ensure_installed = { "lua", "c", "cpp", "go", "javascript", "typescript", "html", "css" },
-            highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-            },
+        require("tree-sitter-manager").setup({
+            -- ensure_installed = {
+            --     "lua", "c", "cpp", "go",
+            --     "javascript", "typescript",
+            --     "html", "css",
+            --     "markdown",
+            -- },
+            auto_install = true,
+            highlight = true,
+            border = "rounded",
         })
-    end
+    end,
 }
