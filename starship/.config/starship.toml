@@ -2,22 +2,18 @@
 # 🌙 TOKYO NIGHT SPLIT PROMPT
 # ----------------------------
 
-
-add_newline = false
-
-format = """
+add_newline = true
+format = """$line_break\
+$username$directory$git_branch$git_status$golang$c$cpp$time\
 $line_break\
-$username$directory$git_branch$git_status$time\
-$line_break\
-$character
-"""
+$character"""
 
 # ----------------------------
 # 👤 USER
 # ----------------------------
 [username]
 show_always = true
-format = "[ $user ]($style)"
+format = "[ $user ]($style)"
 style_user = "fg:#7dcfff bold"
 
 # ----------------------------
@@ -30,29 +26,52 @@ truncation_length = 3
 truncate_to_repo = true
 
 # ----------------------------
-# 🌱 GIT
+# 🌱 GIT BRANCH
 # ----------------------------
 [git_branch]
 symbol = ""
 format = "[$symbol $branch ]($style)"
 style = "fg:#bb9af7 bold"
 
+# ----------------------------
+# 📊 GIT STATUS
+# ----------------------------
 [git_status]
 format = "[$all_status$ahead_behind ]($style)"
 style = "fg:#f7768e"
 
 # ----------------------------
-# 🕒 TIME
+#  TIME
 # ----------------------------
 [time]
 disabled = false
 time_format = "%H:%M"
-format = "[ $time ]($style)"
+format = "[ $time ]($style)"
 style = "fg:#9ece6a"
 
 # ----------------------------
-# ❯ PROMPT LINE
+# ❯ PROMPT CHARACTER
 # ----------------------------
 [character]
 success_symbol = "[λ](bold #7dcfff)"
 error_symbol = "[λ](bold #f7768e)"
+
+# ----------------------------
+#  GOLANG
+# ----------------------------
+[golang]
+format = "[via  $version ]($style)"
+style = "fg:#7dcfff bold"
+
+# ----------------------------
+#  C
+# ----------------------------
+[c]
+format = "[via  $version ]($style)"
+style = "fg:#7dcfff bold"
+
+[cpp]
+disabled = false
+# format = 'via  [$version ]($style)'
+format = "[via  $version ]($style)"
+style = "fg:#7dcfff bold"

@@ -1,21 +1,21 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/plugins/colorscheme.lua
 return {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {
-        transparent = true,
-        styles = {
-            sidebars = "transparent",
-            floats = "transparent",
+    {
+        "folke/tokyonight.nvim",
+        opts = {
+            transparent = true,
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            },
+            on_highlights = function(hl, c)
+                hl.CursorLine = { bg = "none" }
+                hl.CursorColumn = { bg = c.bg_highlight }
+            end,
         },
-        on_highlights = function(hl, c)
-            hl.CursorLine = { bg = "none" }
-            hl.CursorColumn = { bg = c.bg_highlight }
+        config = function(_, opts)
+            require("tokyonight").setup(opts)
+            vim.cmd.colorscheme("tokyonight")
         end,
     },
-    config = function(_, opts)
-        require("tokyonight").setup(opts)
-        vim.cmd.colorscheme("tokyonight")
-    end,
 }

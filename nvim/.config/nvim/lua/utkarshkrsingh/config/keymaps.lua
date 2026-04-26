@@ -17,3 +17,6 @@ map("n", "<Space>/", "<cmd>bnext<CR><cmd>bdelete #<CR>", opts("Close buffer"))
 -- Splitting
 map("n", "<Space>s", "<cmd>vsplit<CR>", opts("Vertical split"))
 map("n", "<Space>h", "<cmd>split<CR>", opts("Horizontal split"))
+--
+-- Exit terminal mode with <Esc>
+map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })

@@ -26,8 +26,13 @@ o.splitbelow = true
 o.termguicolors = true
 o.scrolloff = 8
 o.signcolumn = "yes"
-o.updatetime = 250
+o.updatetime = 300
 o.wrap = false
 
+o.foldenable = true
+o.foldmethod = "manual"
+o.foldlevel = 99
+o.foldcolumn = "0"
+
 vim.cmd("syntax on")
-vim.o.winborder = "rounded"
+o.winborder = "rounded"

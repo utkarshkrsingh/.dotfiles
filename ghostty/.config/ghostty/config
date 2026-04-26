@@ -1,6 +1,7 @@
 # Font
-font-family = "ProFont IIx Nerd Font"
-font-size = 14
+font-family = "JetBrainsMono Nerd Font"
+# font-family = "ProFont IIx Nerd Font"
+font-size = 15
 
 # Transparency
 background-opacity = 1.0
