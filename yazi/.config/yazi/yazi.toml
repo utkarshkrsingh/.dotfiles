@@ -16,10 +16,10 @@ edit = [
 	{ run = 'nvim "$@"', block = true },
 ]
 extractzip = [
-	{ run = 'unzip "$1" -d "$(basename -s .zip "$1")"', desc = "Extract here", for = "unix" },
+	{ run = 'unzip "$1" -d "$(basename -s .zip "$1")"', desc = "Extract here" },
 ]
 
 [open]
 prepend_rules = [
-    { name = "*.zip", use = "extractzip" }
+    { mime = "application/zip", use = "extractzip" }
 ]

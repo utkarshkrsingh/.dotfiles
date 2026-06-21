@@ -11,15 +11,15 @@ background-blur-radius = 20
 cursor-style = bar
 
 # Window size
-window-width = 170
-window-height = 50
+window-width = 150
+window-height = 40
 
 # Window Padding
 window-padding-x = 15
 window-padding-y = 15
 
 # Theme
-theme = TokyoNight Night
+theme = tokyonight_night
 
 # Mouse
 mouse-hide-while-typing = true

@@ -1,7 +1,7 @@
 -- ~/.config/nvim/lua/utkarshkrsingh/config/keymaps.lua
 local map = vim.keymap.set
 local opts = function(desc)
-    return { noremap = true, silent = true, desc = desc }
+	return { noremap = true, silent = true, desc = desc }
 end
 
 -- Saving and exiting
@@ -17,6 +17,7 @@ map("n", "<Space>/", "<cmd>bnext<CR><cmd>bdelete #<CR>", opts("Close buffer"))
 -- Splitting
 map("n", "<Space>s", "<cmd>vsplit<CR>", opts("Vertical split"))
 map("n", "<Space>h", "<cmd>split<CR>", opts("Horizontal split"))
+map("n", "<Space>q", "<C-w>c<CR>", opts("Horizontal split"))
 --
 -- Exit terminal mode with <Esc>
 map("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })

@@ -62,8 +62,8 @@ return {
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opt("LSP hover"))
 					vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, opt("LSP rename"))
 					vim.keymap.set({ "n", "x" }, "<F3>", function()
-						vim.lsp.buf.format({ async = true })
-					end, opt("LSP format"))
+                        require("conform").format({ async = true, lsp_fallback = true })
+					end, opt("Format with conform"))
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opt("Code action"))
 				end,
 			})
@@ -97,6 +97,7 @@ return {
 					"dockerls",
 					"angularls",
 					"eslint",
+                    "gopls",
 				},
 				automatic_installation = true,
 				handlers = {
