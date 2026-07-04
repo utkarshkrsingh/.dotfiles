@@ -1,8 +1,3 @@
-return {
-	"folke/lazydev.nvim",
-	opts = {
-		integrations = {
-			lspconfig = true,
-		},
-	},
-}
+require("lazydev").setup({
+    integrations = { lspconfig = true },
+})

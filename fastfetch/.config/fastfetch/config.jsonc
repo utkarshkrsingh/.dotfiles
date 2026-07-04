@@ -21,7 +21,7 @@
 	"modules": [
 		{
 			"type": "custom",
-			"format": "\u001b[31m        󰣇  Linux: for geeks, by geeks."
+			"format": "\u001b[31m        󰣇  Unix: for geeks, by geeks."
 		},
 		{
 			"type": "custom",
@@ -29,7 +29,7 @@
 		},
 		{
 			"type": "os",
-			"key": "   ",
+			"key": "   ",
 			"keyColor": "blue"
 		},
 		{
