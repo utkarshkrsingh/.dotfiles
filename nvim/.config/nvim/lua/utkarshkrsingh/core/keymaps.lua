@@ -4,6 +4,10 @@ end
 
 vim.g.mapleader = ","
 
+-- moving half page up and down
+vim.keymap.set('n', '<C-d>', '<C-d>zz', opts("Moving half page down with auto-center"))
+vim.keymap.set('n', '<C-u>', '<C-u>zz', opts("Moving half page up with auto-center"))
+
 -- Saving and exiting
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", opts("Save file"))
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", opts("Quit"))

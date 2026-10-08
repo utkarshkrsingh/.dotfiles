@@ -2,16 +2,18 @@ local lsp_group = vim.api.nvim_create_augroup("lsp_keymaps", { clear = true })
 
 -- Diagnostics
 
-local signs = {
+local diagnostic_signs = {
 	[vim.diagnostic.severity.ERROR] = " ",
 	[vim.diagnostic.severity.WARN] = " ",
 	[vim.diagnostic.severity.HINT] = "󰠠 ",
 	[vim.diagnostic.severity.INFO] = " ",
 }
 
+vim.o.winborder = "rounded"
+
 vim.diagnostic.config({
 	signs = {
-		text = signs,
+		text = diagnostic_signs,
 	},
 
 	virtual_text = {
@@ -27,7 +29,6 @@ vim.diagnostic.config({
 	float = {
 		focusable = false,
 		style = "minimal",
-		border = "rounded",
 		source = true,
 		prefix = "●",
 	},
@@ -101,10 +102,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 		-- Diagnostics
 		vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, opts("Line diagnostics"))
-
-		vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts("Previous diagnostic"))
-
-		vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts("Next diagnostic"))
 	end,
 })
 
@@ -130,9 +127,9 @@ local mason_registry = require("mason-registry")
 local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
 	.. "/node_modules/@vue/language-server"
 local vue_plugin = {
-    name = "@vue/typescript-plugin",
-    location = vue_language_server_path,
-    languages = { "vue" },
+	name = "@vue/typescript-plugin",
+	location = vue_language_server_path,
+	languages = { "vue" },
 }
 vim.lsp.config("ts_ls", {
 	workspace_required = false,
@@ -151,14 +148,33 @@ vim.lsp.config("ts_ls", {
 			includeCompletionsForModuleExports = true,
 			includeCompletionsForImportStatements = true,
 		},
-        plugins = {
-            vue_plugin,
-        },
+		plugins = {
+			vue_plugin,
+		},
 	},
 })
 
 -- vue_ls
 vim.lsp.config("vue_ls", {})
+
+-- emmet_language_server
+
+vim.lsp.config("emmet_language_server", {
+	filetypes = {
+		"astro",
+		"html",
+		"typescriptreact",
+		"javascriptreact",
+		"css",
+		"sass",
+		"scss",
+		"less",
+		"vue",
+	},
+})
+
+-- clangd
+vim.lsp.config("clangd", {})
 
 -- gopls
 
@@ -232,22 +248,6 @@ vim.lsp.config("tailwindcss", {
 	},
 })
 
--- emmet_ls
-
-vim.lsp.config("emmet_ls", {
-	filetypes = {
-		"astro",
-		"html",
-		"typescriptreact",
-		"javascriptreact",
-		"css",
-		"sass",
-		"scss",
-		"less",
-		"vue",
-	},
-})
-
 -- Enable servers
 
 vim.lsp.enable({
@@ -257,5 +257,6 @@ vim.lsp.enable({
 	"cssls",
 	"tailwindcss",
 	"vue_ls",
-    "emmet_ls",
+	"emmet_language_server",
+	"clangd",
 })

@@ -20,6 +20,9 @@ local ensure_installed = {
 	"c",
 	"cpp",
 	"go",
+    "sql",
+    "elixir",
+    "rust",
 }
 
 treesitter.install(ensure_installed)

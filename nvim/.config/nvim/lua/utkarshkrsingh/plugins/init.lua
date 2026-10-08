@@ -26,7 +26,15 @@ require("utkarshkrsingh.plugins.completion")
 require("utkarshkrsingh.plugins.conform")
 
 -- file explorer
-require("utkarshkrsingh.plugins.nvim-tree")
+-- require("utkarshkrsingh.plugins.nvim-tree")
+require("utkarshkrsingh.plugins.neo-tree")
 
 -- dashboard
 require("utkarshkrsingh.plugins.dashboard")
+
+
+-- toggleterm
+require("utkarshkrsingh.plugins.toggleterm")
+
+-- markdown preview
+require("utkarshkrsingh.plugins.markdown-preview")

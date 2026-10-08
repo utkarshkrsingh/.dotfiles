@@ -47,3 +47,6 @@ source "${HOME}/.zshrc.d/zoxide.sh"
 
 # Source tools configuration (if applicable)
 source "${HOME}/.zshrc.d/tools.sh"
+
+# Source direnv configuration
+source "${HOME}/.zshrc.d/direnv.sh"

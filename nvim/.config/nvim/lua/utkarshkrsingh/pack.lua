@@ -16,6 +16,8 @@ vim.pack.add({
 
 	-- colorscheme
 	{ src = "https://github.com/folke/tokyonight.nvim" },
+    { src = "https://github.com/navarasu/onedark.nvim" },
+    { src = "https://github.com/shaunsingh/nord.nvim" },
 
 	-- git
 	{ src = "https://github.com/kdheepak/lazygit.nvim" },
@@ -47,11 +49,21 @@ vim.pack.add({
 	{ src = "https://github.com/stevearc/conform.nvim" },
 
     -- file explorer
-    { src = "https://github.com/nvim-tree/nvim-tree.lua" },
+    -- { src = "https://github.com/nvim-tree/nvim-tree.lua" },
     { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+    { src = "https://github.com/nvim-neo-tree/neo-tree.nvim" },
+    { src = "https://github.com/MunifTanjim/nui.nvim" },
+    { src = "https://github.com/DaikyXendo/nvim-material-icon" },
 
     -- dashboard
     { src = "https://github.com/nvimdev/dashboard-nvim" },
+
+    -- toggleterm
+    { src = "https://github.com/akinsho/toggleterm.nvim" },
+
+    { src = "https://github.com/christoomey/vim-tmux-navigator" },
+
+    { src = "https://github.com/iamcco/markdown-preview.nvim" },
 })
 
 -- NOTE: call plugins

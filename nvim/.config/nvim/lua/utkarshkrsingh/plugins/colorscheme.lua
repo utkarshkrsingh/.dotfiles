@@ -1,5 +1,5 @@
 require("tokyonight").setup({
-    transparent = true,
+    transparent = false,
 
     styles = {
         sidebars = "transparent",
@@ -12,4 +12,8 @@ require("tokyonight").setup({
     end,
 })
 
-vim.cmd("colorscheme tokyonight")
+require("onedark").setup({
+    style = 'darker'
+})
+
+vim.cmd("colorscheme nord")

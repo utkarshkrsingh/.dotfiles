@@ -36,6 +36,7 @@ mason_lspconfig.setup({
         "cssls",
         "gopls",
         "tailwindcss",
-        "emmet_ls",
+        "clangd",
+        "emmet_language_server",
     }
 })
